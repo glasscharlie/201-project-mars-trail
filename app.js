@@ -4,5 +4,13 @@ var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
 
 
-leftCardEl.name = 'can i do this';
-console.log(leftCardEl.name);
+leftCardEl.textContent = 'placeholder text A';
+containerEl.appendChild(leftCardEl);
+
+centerCardEl.textContent = 'placeholder text B';
+containerEl.appendChild(centerCardEl);
+
+rightCardEl.textContent = 'placeholder text C';
+containerEl.appendChild(rightCardEl);
+
+
