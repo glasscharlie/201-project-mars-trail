@@ -1,0 +1,25 @@
+body{
+  width: 90%;
+  margin: 0 auto;
+  background-image: url(images/space.png);
+}
+
+h1{
+  text-align: center;
+  border: 1px solid black;
+  background: black;
+  color: white;
+}
+p{
+  color: white;
+}
+footer{
+  text-align: center;
+}
+
+img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  padding: 10px;
+}
