@@ -1,8 +1,8 @@
 body{
   width: 90%;
   margin: 0 auto;
-  /* background-image: url(images/mars.jpg); 
-  background-image: no-repeat; */
+ 
+  /* background-color: rgb(168, 163, 163); */
 }
 .top {
   border: 1px solid rgb(184, 184, 184);
@@ -30,8 +30,25 @@ body{
 }
 button:hover{
   background-color: rgb(78, 78, 78);
-  color: white;
-  
+  color: white; 
+}
+#imageContainer {
+  border: 1px solid white;
+  height: 70%;
+  width: 85%;
+  background-color: azure;
+  opacity: 0.5;
+  position: relative;
+  top: 24%;
+  left: 7%; 
+}
+#Counter{
+  border: 1px solid white;
+  width: 20%;
+  height: 50px;
+  float: right;
+  margin: 10px;
+
 }
 footer{
   border: 1px solid rgb(184, 184, 184);
@@ -40,3 +57,5 @@ footer{
   text-align: center;
   color: white;
 }
+
+  
