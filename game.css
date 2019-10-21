@@ -1,6 +1,8 @@
 body{
   width: 90%;
   margin: 0 auto;
+  /* background-image: url(images/mars.jpg); 
+  background-image: no-repeat; */
 }
 .top {
   border: 1px solid rgb(184, 184, 184);
@@ -8,9 +10,14 @@ body{
   height: 50px;
   margin-top: 20px;
   
-  
 }
-  button{
+#background{
+  background-image: url(images/mars1.jpg); 
+  opacity: 0.9;
+  height: 850px;
+  margin: 30px auto;
+}
+ button{
   width: 100px;
   height: 30px;
   margin:  auto;
@@ -30,4 +37,6 @@ footer{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   height: 80px;
+  text-align: center;
+  color: white;
 }
