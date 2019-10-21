@@ -1,11 +1,9 @@
+
+//Global Variables
 var leftCardEl = document.getElementById('left');
 var centerCardEl = document.getElementById('center');
 var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
-
-
-//Global Variables
-
 var round = 1;
 var allCards = [];
 var maxRounds = 6;
@@ -17,8 +15,11 @@ var roundThreeArray = [];
 var leftCard;
 var middleCard;
 var rightCard;
+var endGame;
+var pickedCardID;
 //game state variable?
 
+containerEl.addEventListener('click', handleClick);
 
 function uniqueCardGenerator() {
   while (uniqueCardArray.length < 3) {
@@ -41,49 +42,53 @@ function getCards() {
 }
 
 function endGameYesNo() {
-  //insert i for 0 when we have it set up properly
-  //pickedCard will be connected to an event listener.
-  var pickedCard = allCards[0].gameOver;
-  if (pickedCard.gameOver = false) {
-    getCards();
-  } else {
-    //render end of game message and score.
-    return;
+  pickedCardID = event.target.title;
+  console.log(pickedCardID);
+  for (var i = 0; i < allCards.length; i++) {
+    if (allCards[i].cardID === pickedCardID) {
+      endGame = allCards[i].gameOver;
+      console.log(endGame);
+      if (endGame === false) {
+        /// continue
+      } else {
+        /// stop game and render scores and stuff
+      }
+    }
   }
 }
 
 
 
 //Card Object
-function Card(text, cardRound, gameOver) {
+function Card(text, cardRound, gameOver, cardID) {
   this.text = text;
   this.cardRound = cardRound;
-  // this.cardID = cardID;
+  this.cardID = cardID;
   this.gameOver = gameOver;
   allCards.push(this);
 }
 
-new Card('blah blah blah', 1, false);
-new Card('hey hi ho', 1, false);
-new Card('some text', 1, true);
-new Card('be or not to be', 1, true);
-new Card('jump over rock', 1, true);
+new Card('blah blah blah', 1, false, '1A');
+new Card('hey hi ho', 1, false, '1B');
+new Card('some text', 1, true, '1C');
+new Card('be or not to be', 1, true, '1D');
+new Card('jump over rock', 1, true, '1E');
 
-new Card('Mars mars mars', 2, false);
-new Card('spaceships', 2, false);
-new Card('open the airlock', 2, true);
-new Card('fix door', 2, true);
-new Card('turn on computer', 2, true);
+new Card('Mars mars mars', 2, false, '2A');
+new Card('spaceships', 2, false, '2B');
+new Card('open the airlock', 2, true, '2C');
+new Card('fix door', 2, true, '2D');
+new Card('turn on computer', 2, true, '2E');
 
-new Card('Launch rocket', 3, false);
-new Card('connect wire', 3, false);
-new Card('rewire thruster', 3, true);
-new Card('push copilot out airlock', 3, true);
-new Card('Dump cargo', 3, true);
+new Card('Launch rocket', 3, false, '3A');
+new Card('connect wire', 3, false, '3B');
+new Card('rewire thruster', 3, true, '3C');
+new Card('push copilot out airlock', 3, true, '3D');
+new Card('Dump cargo', 3, true, '3E');
 
 //Put allCards into array of arrays
 function getRounds() {
-  for (k = 0;k < allCards.length;k++) {
+  for (k = 0; k < allCards.length; k++) {
     // console.log(allCards[k].cardRound);
     if (allCards[k].cardRound === 1) {
       roundOneArray.push(allCards[k]);
@@ -95,7 +100,7 @@ function getRounds() {
       roundThreeArray.push(allCards[k]);
     }
   }
-  allRoundCards = [roundOneArray,roundTwoArray,roundThreeArray];
+  allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray];
 }
 getRounds();
 
@@ -106,15 +111,24 @@ function makeRandom(randomCount) {
 
 // Picking 3 random cards for round
 function render() {
-  getCards()
+  getCards();
   leftCardEl.textContent = leftCard.text;
+  leftCardEl.title = leftCard.cardID;
   containerEl.appendChild(leftCardEl);
-  
+
   centerCardEl.textContent = middleCard.text;
+  centerCardEl.title = middleCard.cardID;
   containerEl.appendChild(centerCardEl);
-  
+
   rightCardEl.textContent = rightCard.text;
+  rightCardEl.title = rightCard.cardID;
   containerEl.appendChild(rightCardEl);
 }
 
-render() 
+render();
+
+function handleClick() {
+  endGameYesNo();
+  // console.log(event.target.title);
+  // pickedCard = event.target.title;
+}
