@@ -1,0 +1,33 @@
+body{
+  width: 90%;
+  margin: 0 auto;
+}
+.top {
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(36, 35, 35);
+  height: 50px;
+  margin-top: 20px;
+  
+  
+}
+  button{
+  width: 100px;
+  height: 30px;
+  margin:  auto;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  position: relative;
+  /* top:2px;
+  left: 2px; */
+  
+}
+button:hover{
+  background-color: rgb(78, 78, 78);
+  color: white;
+  
+}
+footer{
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(36, 35, 35);
+  height: 80px;
+}
