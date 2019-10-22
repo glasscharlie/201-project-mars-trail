@@ -9,12 +9,15 @@ var round = 0;
 var playerScore = 0;
 var allPlayers = [];
 var allCards = [];
-var maxRounds = 2;
+var maxRounds = 5;
 var uniqueCardArray = [];
 var allRoundCards = [];
 var roundOneArray = [];
 var roundTwoArray = [];
 var roundThreeArray = [];
+var roundFourArray = [];
+var roundFiveArray = [];
+var roundSixArray = [];
 var topCard;
 var leftCard;
 var middleCard;
@@ -81,7 +84,7 @@ function endGameYesNo() {
         centerCardEl.remove();
         rightCardEl.remove();
         topCardEl.remove();
-        var gameOverEl = document.createElement('div');
+        gameOverEl = document.createElement('div');
         gameOverEl.textContent = 'GAME OVER';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
@@ -121,6 +124,24 @@ new Card('Bad Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque 
 new Card('Bad Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.', 3, true, '3D');
 new Card('Bad Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.', 3, true, '3E');
 
+new Card('Good Mauris in aliquam sem fringilla. Ultrices dui sapien eget mi proin sed libero enim sed. Turpis massa sed elementum tempus egestas. Id semper risus in hendrerit gravida rutrum. Cursus in hac habitasse platea dictumst quisque sagittis. Tristique risus nec feugiat in. Tellus molestie nunc non blandit massa enim nec dui nunc.', 4, false, '4A');
+new Card('Good Faucibus in ornare quam viverra orci sagittis eu. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Aliquam vestibulum morbi blandit cursus risus at ultrices. Ac turpis egestas maecenas pharetra convallis posuere morbi.', 4, false, '4B');
+new Card('Bad Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Amet commodo nulla facilisi nullam vehicula. ', 4, true, '4C');
+new Card('Bad Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.', 4, true, '4D');
+new Card('Bad Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.', 4, true, '4E');
+
+new Card('Good Mauris in aliquam sem fringilla. Ultrices dui sapien eget mi proin sed libero enim sed. Turpis massa sed elementum tempus egestas. Id semper risus in hendrerit gravida rutrum. Cursus in hac habitasse platea dictumst quisque sagittis. Tristique risus nec feugiat in. Tellus molestie nunc non blandit massa enim nec dui nunc.', 5, false, '5A');
+new Card('Good Faucibus in ornare quam viverra orci sagittis eu. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Aliquam vestibulum morbi blandit cursus risus at ultrices. Ac turpis egestas maecenas pharetra convallis posuere morbi.', 5, false, '5B');
+new Card('Bad Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Amet commodo nulla facilisi nullam vehicula. ', 5, true, '5C');
+new Card('Bad Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.', 5, true, '5D');
+new Card('Bad Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.', 5, true, '5E');
+
+new Card('Good Mauris in aliquam sem fringilla. Ultrices dui sapien eget mi proin sed libero enim sed. Turpis massa sed elementum tempus egestas. Id semper risus in hendrerit gravida rutrum. Cursus in hac habitasse platea dictumst quisque sagittis. Tristique risus nec feugiat in. Tellus molestie nunc non blandit massa enim nec dui nunc.', 6, false, '6A');
+new Card('Good Faucibus in ornare quam viverra orci sagittis eu. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Aliquam vestibulum morbi blandit cursus risus at ultrices. Ac turpis egestas maecenas pharetra convallis posuere morbi.', 6, false, '6B');
+new Card('Bad Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Amet commodo nulla facilisi nullam vehicula. ', 6, true, '6C');
+new Card('Bad Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.', 6, true, '6D');
+new Card('Bad Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.', 6, true, '6E');
+
 //Put allCards into array of arrays
 function getRounds() {
   for (var i = 0; i < allCards.length; i++) {
@@ -134,8 +155,17 @@ function getRounds() {
     if (allCards[i].cardRound === 3) {
       roundThreeArray.push(allCards[i]);
     }
+    if (allCards[i].cardRound === 4) {
+      roundFourArray.push(allCards[i]);
+    }
+    if (allCards[i].cardRound === 5) {
+      roundFiveArray.push(allCards[i]);
+    }
+    if (allCards[i].cardRound === 6) {
+      roundSixArray.push(allCards[i]);
+    }
   }
-  allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray];
+  allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray, roundFourArray, roundFiveArray, roundSixArray];
 }
 getRounds();
 
