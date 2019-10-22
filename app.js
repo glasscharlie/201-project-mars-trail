@@ -6,6 +6,8 @@ var centerCardEl = document.getElementById('center');
 var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
 var round = 0;
+var playerScore = 0;
+var allPlayers = [];
 var allCards = [];
 var maxRounds = 2;
 var uniqueCardArray = [];
@@ -54,6 +56,7 @@ function endGameYesNo() {
       if (endGame === false && round < maxRounds) {
         /// continue
         round++;
+        playerScore++;
         console.log('round: ',round);
         render();
       }
@@ -69,6 +72,8 @@ function endGameYesNo() {
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
         console.log('GAME OVER Win!!!!!');
+        playerScore++;
+        getStorageData();
       }
       else {
         removeEventListener('click', handleClick);
@@ -81,6 +86,7 @@ function endGameYesNo() {
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
         console.log('GAME OVER lose!!!!!');
+        getStorageData();
       }
     }
   }
@@ -167,4 +173,22 @@ function handleClick() {
   // }
   // console.log(event.target.title);
   // pickedCard = event.target.title;
+}
+
+
+function Player(name, score) {
+  this.name = name;
+  this.score = score;
+  // this.cardID = cardID;
+  allPlayers.push(this);
+}
+
+function getStorageData() {
+  if(localStorage.Data) {
+    var person = JSON.parse(localStorage.Data);
+    allPlayers = JSON.parse(localStorage.Player);
+    console.log (allPlayers);
+    new Player(person, playerScore);
+    localStorage.Player = JSON.stringify(allPlayers);
+  }
 }

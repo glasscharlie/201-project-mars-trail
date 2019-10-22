@@ -5,6 +5,9 @@ function addPlayer(event) {
   event.preventDefault();
   var playerID = event.target.newPlayer.value;
   console.log(playerID);
+  localStorage.Data = JSON.stringify(playerID);
   userForm.removeEventListener('submit', addPlayer);
   window.location.href = 'game.html';
 }
+
+
