@@ -1,26 +1,26 @@
 //
 // Text from https://loremipsum.io/generator/?n=5&t=p
 // Text from http://saganipsum.com/
-var card1AText = 'Extraplanetary the ash of stellar alchemy rich in mystery Tunguska event star stuff harvesting star light light years? Made in the interiors of collapsing stars stirred by starlight emerged into consciousness permanence of the stars are creatures of the cosmos inconspicuous motes of rock and gas.';
-var card1BText = 'Kindling the energy hidden in matter colonies hearts of the stars laws of physics take root and flourish made in the interiors of collapsing stars? Something incredible is waiting to be known how far away realm of the galaxies another world something incredible is waiting to be known are creatures of the cosmos?';
-var card1CText = 'Gathered by gravity across the centuries Apollonius of Perga ship of the imagination extraplanetary brain is the seed of intelligence. A very small stage in a vast cosmic arena Sea of Tranquility the carbon in our apple pies made in the interiors of collapsing stars the sky calls to us another world.';
+var card1AText = 'Greet the strangers!';
+var card1BText = 'Hide!';
+var card1CText = 'Run!';
 
-var card2AText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed risus ultricies tristique nulla aliquet enim. Nisl nunc mi ipsum faucibus vitae aliquet nec.';
-var card2BText = 'Feugiat scelerisque varius morbi enim nunc. Eget felis eget nunc lobortis mattis aliquam. Ac auctor augue mauris augue neque. Enim ut sem viverra aliquet. Odio morbi quis commodo odio. Netus et malesuada fames ac turpis egestas. Eu scelerisque felis imperdiet proin fermentum leo. Risus quis varius quam quisque id.';
-var card2CText = 'Nullam ac tortor vitae purus faucibus ornare. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Ullamcorper a lacus vestibulum sed. Gravida quis blandit turpis cursus in hac habitasse. Scelerisque felis imperdiet proin fermentum. Mauris sit amet massa vitae tortor condimentum lacinia quis vel. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum.';
+var card2AText = 'Stand your ground! How tough could they be?';
+var card2BText = 'Take the Rover: They can’t hurt what they cant catch!';
+var card2CText = 'Charge through!';
 
-var card3AText = 'Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Amet commodo nulla facilisi nullam vehicula.';
-var card3BText = 'Parturient montes nascetur ridiculus mus. Cursus metus aliquam eleifend mi in nulla. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Etiam sit amet nisl purus in mollis nunc sed id. Non consectetur a erat nam at lectus urna duis. Bibendum est ultricies integer quis auctor elit.';
-var card3CText = 'Etiam sit amet nisl purus in mollis nunc sed id. Non consectetur a erat nam at lectus urna duis. Bibendum est ultricies integer quis auctor elit.';
+var card3AText = ' Food and Water, humans need these things.';
+var card3BText = 'Ship parts, planet entry is a messy business, something is probably damaged';
+var card3CText = 'This seems like a great place to hide!';
 
-var card4AText = 'Star stuff harvesting star light cosmos Drake Equation Vangelis are creatures of the cosmos corpus callosum. Realm of the galaxies made in the interiors of collapsing stars tesseract stirred by starlight realm of the galaxies dream of the mind\'s eye? Something incredible is waiting to be known how far away citizens of distant epochs the ash of stellar alchemy rich in heavy atoms not a sunrise but a galaxyrise?';
-var card4BText = 'Prime number emerged into consciousness courage of our questions cosmic ocean explorations Rig Veda. Laws of physics stirred by starlight paroxysm of global death the only home we\'ve ever known with pretty stories for which there\'s little good evidence dispassionate extraterrestrial observer.';
-var card4CText = 'A very small stage in a vast cosmic arena Sea of Tranquility the carbon in our apple pies made in the interiors of collapsing stars the sky calls to us another world. Billions!';
+var card4AText = ' Cut the red wire!';
+var card4BText = 'Run the diagnostic program.';
+var card4CText = 'Stare at it and wait till you figure it out';
 
-var card5AText = 'Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.';
-var card5BText = 'Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.';
-var card5CText = 'Faucibus in ornare quam viverra orci sagittis eu. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Aliquam vestibulum morbi blandit cursus risus at ultrices. Ac turpis egestas maecenas pharetra convallis posuere morbi.';
+var card5AText = ' I can eyeball it!';
+var card5BText = 'Gotta fire up the navigational computer';
+var card5CText = 'Hit the big red button Science is for nerds!';
 
-var card6AText = 'Realm of the galaxies made in the interiors of collapsing stars tesseract stirred by starlight realm of the galaxies dream of the mind\'s eye? Something incredible is waiting to be known how far away citizens of distant epochs the ash of stellar alchemy rich in heavy atoms not a sunrise but a galaxyrise?';
-var card6BText = 'A very small stage in a vast cosmic arena Sea of Tranquility the carbon in our apple pies made in the interiors of collapsing stars the sky calls to us another world.';
-var card6CText = 'Laws of physics stirred by starlight paroxysm of global death the only home we\'ve ever known with pretty stories for which there\'s little good evidence dispassionate extraterrestrial observer.';
+var card6AText = ' lock everything down, take no chances.';
+var card6BText = ' Wait and see if anyone else shows up';
+var card6CText = 'Take a nap, its safe';
