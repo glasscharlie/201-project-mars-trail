@@ -60,7 +60,7 @@ function endGameYesNo() {
         console.log('round: ',round);
         render();
       }
-      else if (round === maxRounds){
+      else if (round === maxRounds && endGame === false){
         //Winning End game
         removeEventListener('click', handleClick);
         leftCardEl.remove();
