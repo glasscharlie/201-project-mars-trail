@@ -1,5 +1,6 @@
 
 //Global Variables
+var topCardEl = document.getElementById('situation');
 var leftCardEl = document.getElementById('left');
 var centerCardEl = document.getElementById('center');
 var rightCardEl = document.getElementById('right');
@@ -12,11 +13,13 @@ var allRoundCards = [];
 var roundOneArray = [];
 var roundTwoArray = [];
 var roundThreeArray = [];
+var topCard;
 var leftCard;
 var middleCard;
 var rightCard;
 var endGame;
 var pickedCardID;
+var roundScenarioText = ['Get to the ship', 'Fight the Martians', 'Collect Supplies', 'Fix the spaceship', 'Navigate course', 'Launch'];
 //game state variable?
 
 containerEl.addEventListener('click', handleClick);
@@ -32,6 +35,7 @@ function uniqueCardGenerator() {
 
 function getCards() {
   uniqueCardGenerator();
+  topCard = roundScenarioText[round];
   leftCard = allRoundCards[round][uniqueCardArray[0]];
   middleCard = allRoundCards[round][uniqueCardArray[1]];
   rightCard = allRoundCards[round][uniqueCardArray[2]];
@@ -113,6 +117,9 @@ function makeRandom(randomCount) {
 // Picking 3 random cards for round
 function render() {
   getCards();
+  topCardEl.textContent = topCard;
+  containerEl.appendChild(topCardEl);
+
   leftCardEl.textContent = leftCard.text;
   leftCardEl.title = leftCard.cardID;
   containerEl.appendChild(leftCardEl);
