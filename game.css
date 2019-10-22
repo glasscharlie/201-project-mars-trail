@@ -1,8 +1,13 @@
 body{
   width: 90%;
   margin: 0 auto;
+  background-image: url(images/space.png);
  
   /* background-color: rgb(168, 163, 163); */
+}
+p{
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: white;
 }
 .top {
   border: 1px solid rgb(184, 184, 184);
@@ -13,86 +18,51 @@ body{
 }
 #background{
   background-image: url(images/mars1.jpg); 
-  opacity: 0.9;
+  /* opacity: 0.9; */
   height: 850px;
   margin: 30px auto;
 }
  button{
   width: 100px;
-  height: 30px;
+  height: 50px;
   margin:  auto;
   -webkit-transition: 350ms;
   transition: 350ms;
   position: relative;
-  /* top:2px;
-  left: 2px; */
+
   
 }
 button:hover{
   background-color: rgb(78, 78, 78);
   color: white; 
 }
-/* #imageContainer {
-  border: 1px solid white;
-  height: 70%;
-  width: 85%;
-  background-color: azure;
-  opacity: 0.5;
-  position: relative;
-  top: 24%;
-  left: 7%; 
-} */
 
-#imageContainer div{
+
+ #imageContainer div{
   display: inline-block;
-  width: 100%;
   margin-top: 100px;
   border:1px solid white;
   width: 20%;
   height: 500px;
   text-align: center;
-  margin-left: 80px;
+  margin-left: 9%;
   padding: 5px;
   color:white;
   background-color: black;
-  opacity: 0.7;
-   
-}
+  opacity: 0.7;  
+}  
 
 
 
-/* #left {
-  border:1px solid white;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  margin-left: 10%;
-  padding: 5px;
-  color:white;
-}
-#center{
-  border:1px solid white;
-  width: 200px;
-  height: 200px;
-  margin-left: 10%;
-  padding: 5px;
-  color:white;
-  
-}
-#right{
-  border:1px solid white;
-  width: 200px;
-  height: 200px;
-  margin-left: 10%;
-  padding: 5px;
-  color:white;
-} */
 #Counter{
   border: 1px solid white;
   width: 20%;
   height: 50px;
-  float: right;
-  margin: 10px;
+  /* float: right;
+  margin: 10px; */
+  position: absolute;
+  top:120px;
+  right: 100px;
 
 }
 footer{
