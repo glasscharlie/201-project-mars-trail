@@ -1,6 +1,7 @@
+'use strict';
+
 var players = JSON.parse(localStorage.Player);
 console.log (players);
-
 
 function generateTable() {
   var body = document.getElementById('highscores');
@@ -20,7 +21,6 @@ function generateTable() {
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
-    
     for (var k = 0; k < 1; k++){
       var cellTwo = document.createElement('td');
       var cellTextTwo = document.createTextNode(players[i].score);
