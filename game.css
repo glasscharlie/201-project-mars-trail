@@ -75,6 +75,13 @@ button:hover{
   border: 1px solid rgb(184, 184, 184);
 }
 
+#gameOverElement {
+  color: white;
+  border: 1px solid rgb(184, 184, 184);
+  height: 300px;
+  font-size: 20em;
+}
+
 footer{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
