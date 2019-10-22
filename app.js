@@ -23,7 +23,6 @@ var middleCard;
 var rightCard;
 var endGame;
 var pickedCardID;
-var roundScenarioText = ['Get to the ship', 'Fight the Martians', 'Collect Supplies', 'Fix the spaceship', 'Navigate course', 'Launch'];
 //game state variable?
 
 containerEl.addEventListener('click', handleClick);
