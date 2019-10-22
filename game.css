@@ -55,11 +55,14 @@ button:hover{
   opacity: 0.7;  
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
 } 
-
-
-
+ #imageContainer li:hover{
+ -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+}
 #Counter{
   border: 1px solid white;
   width: 20%;
