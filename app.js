@@ -56,7 +56,16 @@ function endGameYesNo() {
         console.log(round);
         endGame = null;
       } else {
-        /// stop game and render scores and stuff
+        removeEventListener('click', handleClick);
+        leftCardEl.remove();
+        centerCardEl.remove();
+        rightCardEl.remove();
+        topCardEl.remove();
+        var gameOverEl = document.createElement('div');
+        gameOverEl.textContent = 'GAME OVER';
+        gameOverEl.id = 'gameOverElement';
+        containerEl.appendChild(gameOverEl);
+        console.log('GAME OVER!!!!!');
       }
     }
   }
@@ -137,7 +146,9 @@ render();
 
 function handleClick() {
   endGameYesNo();
-  render();
+  if (endGame === false) {
+    render();
+  }
   // console.log(event.target.title);
   // pickedCard = event.target.title;
 }
