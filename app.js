@@ -41,26 +41,26 @@ function getCards() {
   leftCard = allRoundCards[round][uniqueCardArray[0]];
   middleCard = allRoundCards[round][uniqueCardArray[1]];
   rightCard = allRoundCards[round][uniqueCardArray[2]];
-  console.log(leftCard, middleCard, rightCard);
+  // console.log(leftCard, middleCard, rightCard);
   uniqueCardArray = [];
 }
 
 function endGameYesNo() {
   pickedCardID = event.target.title;
-  console.log(pickedCardID);
+  // console.log(pickedCardID);
   for (var i = 0; i < allCards.length; i++) {
     if (allCards[i].cardID === pickedCardID) {
       endGame = allCards[i].gameOver;
-      console.log(endGame);
-      console.log('line 53');
+      // console.log(endGame);
+      // console.log('line 53');
       if (endGame === false && round < maxRounds) {
         /// continue
         round++;
         playerScore++;
-        console.log('round: ',round);
+        // console.log('round: ',round);
         render();
       }
-      else if (round === maxRounds && endGame === false){
+      else if (round === maxRounds){
         //Winning End game
         removeEventListener('click', handleClick);
         leftCardEl.remove();
@@ -71,7 +71,7 @@ function endGameYesNo() {
         gameOverEl.textContent = 'You Win';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER Win!!!!!');
+        // console.log('GAME OVER Win!!!!!');
         playerScore++;
         getStorageData();
       }
@@ -85,7 +85,7 @@ function endGameYesNo() {
         gameOverEl.textContent = 'GAME OVER';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER lose!!!!!');
+        // console.log('GAME OVER lose!!!!!');
         getStorageData();
       }
     }
@@ -167,9 +167,9 @@ render();
 
 function handleClick() {
   endGameYesNo();
-  console.log('endgame: ',endGame);
+  // console.log('endgame: ',endGame);
   // if (endGame !== true) {
-    
+
   // }
   // console.log(event.target.title);
   // pickedCard = event.target.title;
@@ -186,9 +186,15 @@ function Player(name, score) {
 function getStorageData() {
   if(localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
-    allPlayers = JSON.parse(localStorage.Player);
-    console.log (allPlayers);
-    new Player(person, playerScore);
-    localStorage.Player = JSON.stringify(allPlayers);
+    console.log('PERSON', person);
   }
+  if(localStorage.Player) {
+    allPlayers = JSON.parse(localStorage.Player);
+  }
+  // console.log (localStorage.Player);
+  // console.log (allPlayers);
+  new Player(person, playerScore);
+  localStorage.Player = JSON.stringify(allPlayers);
 }
+
+
