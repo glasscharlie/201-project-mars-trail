@@ -4,8 +4,10 @@ var leftCardEl = document.getElementById('left');
 var centerCardEl = document.getElementById('center');
 var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
+var counterEl = document.getElementById('Counter');
 var round = 0;
 var playerScore = 0;
+counterEl.textContent = `Current Score: ${playerScore}`;
 var allPlayers = [];
 var allCards = [];
 var maxRounds = 5;
@@ -73,6 +75,7 @@ function endGameYesNo() {
         /// continue
         round++;
         playerScore++;
+        counterEl.textContent = `Current Score: ${playerScore}`;
         console.log('round: ', round);
         render();
       }
@@ -89,6 +92,7 @@ function endGameYesNo() {
         containerEl.appendChild(gameOverEl);
         console.log('GAME OVER Win!!!!!');
         playerScore++;
+        counterEl.textContent = `Current Score: ${playerScore}`;
         getStorageData();
       }
       else {

@@ -68,7 +68,10 @@ button:hover{
   width: 20%;
   height: 50px;
   background-color: rgb(36, 35, 35);
-
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
 
 }
 
