@@ -4,9 +4,9 @@ var leftCardEl = document.getElementById('left');
 var centerCardEl = document.getElementById('center');
 var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
-var round = 1;
+var round = 0;
 var allCards = [];
-var maxRounds = 6;
+var maxRounds = 3;
 var uniqueCardArray = [];
 var allRoundCards = [];
 var roundOneArray = [];
@@ -31,14 +31,12 @@ function uniqueCardGenerator() {
 }
 
 function getCards() {
-  for (var i = 0; i < allRoundCards.length; i++) {
-    uniqueCardGenerator();
-    leftCard = allRoundCards[i][uniqueCardArray[0]];
-    middleCard = allRoundCards[i][uniqueCardArray[1]];
-    rightCard = allRoundCards[i][uniqueCardArray[2]];
-    console.log(leftCard, middleCard, rightCard);
-    uniqueCardArray = [];
-  }
+  uniqueCardGenerator();
+  leftCard = allRoundCards[round][uniqueCardArray[0]];
+  middleCard = allRoundCards[round][uniqueCardArray[1]];
+  rightCard = allRoundCards[round][uniqueCardArray[2]];
+  console.log(leftCard, middleCard, rightCard);
+  uniqueCardArray = [];
 }
 
 function endGameYesNo() {
@@ -48,16 +46,15 @@ function endGameYesNo() {
     if (allCards[i].cardID === pickedCardID) {
       endGame = allCards[i].gameOver;
       console.log(endGame);
-      if (endGame === false) {
+      if (endGame === false && round < maxRounds) {
         /// continue
+        round++;
       } else {
         /// stop game and render scores and stuff
       }
     }
   }
 }
-
-
 
 //Card Object
 function Card(text, cardRound, gameOver, cardID) {
