@@ -1,0 +1,110 @@
+body{
+  width: 90%;
+  margin: 0 auto;
+  background-image: url(images/space.png);
+}
+
+h1{
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(36, 35, 35);
+  color: white;
+  height:50px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+  }
+h2{
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+img{
+  width: 40%;
+  height: 15%;
+  float: right;
+  margin-bottom: 30px;
+  margin-top: 48px;
+}
+ol{
+  border: 1px solid rgb(247, 247, 247);
+  width:50%;
+  background-color: black;
+  opacity: 0.6;
+}
+li{
+  font-size: 20px;
+  color: white;
+  padding: 5px;
+  /* height: 60%;
+  width: 40%; */
+  margin: 5px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  
+}
+a{
+  color: white;
+  font-size: 20px;
+  display: inline;
+  margin-right: 20px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid white;
+  position: relative;
+  top: 20px;
+  -webkit-transition: 550ms;
+  transition: 550ms;
+  border-radius: 70%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  
+}
+a:hover{
+  background-color: rgb(172, 165, 165);
+  color:black;
+}
+#newGame{
+  text-align: center;
+  margin: 30px;
+  margin-top: 130px;
+  background-color: black;
+  opacity: 0.6;
+}
+fieldset{
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+}
+#playerName{
+  width: 300px;
+  height: 40px;
+}
+
+button{
+  width: 200px;
+  height: 50px;
+  margin: 25px auto;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  margin-left: 45%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  /* margin-bottom: 140px; */
+  font-size: 20px;
+
+  
+}
+button:hover{
+  background-color: rgb(78, 78, 78);
+  color: white;
+  
+}
+
+
+footer{
+  text-align: center;
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(36, 35, 35);
+  height: 80px;  
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+}
