@@ -1,0 +1,43 @@
+body{
+    width: 90%;
+    margin: 0 auto;
+    background-image: url(images/mars-scores.png);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    height: 800px; 
+  background-position: center; 
+  background-size: cover;
+  }
+
+  h1{
+    text-align: center;
+    border: 1px solid rgb(184, 184, 184);
+    height: 50px;
+    background: rgb(36, 35, 35);
+    color: white;
+    margin-top: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  footer{
+  text-align: center;
+  border: 1px solid rgb(184, 184, 184);
+  background-color: rgb(36, 35, 35);
+  height: 80px;  
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  }
+
+  button{
+    width: 100px;
+    height: 30px;
+    margin: 25px auto;
+    -webkit-transition: 350ms;
+    transition: 350ms;
+  }
+  button:hover{
+    background-color: rgb(78, 78, 78);
+    color: white;
+    
+  }
