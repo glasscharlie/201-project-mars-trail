@@ -24,3 +24,4 @@ var card1BText = '';
 // new Card('Phasellus egestas tellus rutrum tellus pellentesque. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Amet commodo nulla facilisi nullam vehicula. ', 3, true, '3C');
 // new Card('Volutpat consequat mauris nunc congue nisi vitae suscipit. Nunc sed blandit libero volutpat. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Id velit ut tortor pretium viverra suspendisse potenti nullam ac.', 3, true, '3D');
 // new Card('Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id. Eu augue ut lectus arcu bibendum. Purus gravida quis blandit turpis cursus. Sit amet justo donec enim diam vulputate ut. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.', 3, true, '3E');
+

@@ -14,7 +14,7 @@ h1{
   }
 h2{
     color: white;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
   }
 
 img{
@@ -31,13 +31,13 @@ ol{
   opacity: 0.6;
 }
 li{
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   padding: 5px;
   /* height: 60%;
   width: 40%; */
   margin: 5px;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   
 }
 a{
