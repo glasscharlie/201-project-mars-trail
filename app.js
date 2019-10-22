@@ -242,7 +242,6 @@ function getStorageData() {
   // console.log (localStorage.Player);
   // console.log (allPlayers);
   new Player(person, playerScore);
-  localStorage.Player = JSON.stringify(allPlayers);
 }
 
 
