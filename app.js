@@ -51,7 +51,6 @@ function endGameYesNo() {
         round++;
       } else {
         /// stop game and render scores and stuff
-        containerEl.removeEventListener('click', handleClick);
       }
     }
   }
