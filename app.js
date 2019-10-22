@@ -36,6 +36,21 @@ function uniqueCardGenerator() {
       uniqueCardArray.push(random);
     }
   }
+  // console.log('line 39', allRoundCards[round][uniqueCardArray[0]].gameOver);
+  // console.log('line 40', allRoundCards[round][uniqueCardArray[1]].gameOver);
+  // console.log('line 41', allRoundCards[round][uniqueCardArray[2]].gameOver);
+  if (allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[1]].gameOver && allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[2]].gameOver) {
+    console.log('I was here.');
+    for (var i=0; i<allRoundCards[round].length; i++) {
+      if (allRoundCards[round][i].gameOver !== allRoundCards[round][uniqueCardArray[0]].gameOver) {
+        var randomIndex = makeRandom(2);
+        uniqueCardArray[randomIndex] = i;
+      }
+    }
+  }
+  // console.log('line 47', allRoundCards[round][uniqueCardArray[0]].gameOver);
+  // console.log('line 48', allRoundCards[round][uniqueCardArray[1]].gameOver);
+  // console.log('line 49', allRoundCards[round][uniqueCardArray[2]].gameOver);
 }
 
 function getCards() {
@@ -60,10 +75,10 @@ function endGameYesNo() {
         /// continue
         round++;
         playerScore++;
-        console.log('round: ',round);
+        console.log('round: ', round);
         render();
       }
-      else if (round === maxRounds && endGame === false){
+      else if (round === maxRounds && endGame === false) {
         //Winning End game
         removeEventListener('click', handleClick);
         leftCardEl.remove();
@@ -195,9 +210,9 @@ render();
 
 function handleClick() {
   endGameYesNo();
-  console.log('endgame: ',endGame);
+  console.log('endgame: ', endGame);
   // if (endGame !== true) {
-    
+
   // }
   // console.log(event.target.title);
   // pickedCard = event.target.title;
@@ -212,10 +227,10 @@ function Player(name, score) {
 }
 
 function getStorageData() {
-  if(localStorage.Data) {
+  if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
     allPlayers = JSON.parse(localStorage.Player);
-    console.log (allPlayers);
+    console.log(allPlayers);
     new Player(person, playerScore);
     localStorage.Player = JSON.stringify(allPlayers);
   }
