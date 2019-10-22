@@ -88,16 +88,16 @@ new Card('Dump cargo', 3, true, '3E');
 
 //Put allCards into array of arrays
 function getRounds() {
-  for (k = 0; k < allCards.length; k++) {
-    // console.log(allCards[k].cardRound);
-    if (allCards[k].cardRound === 1) {
-      roundOneArray.push(allCards[k]);
+  for (var i = 0; i < allCards.length; i++) {
+    // console.log(allCards[i].cardRound);
+    if (allCards[i].cardRound === 1) {
+      roundOneArray.push(allCards[i]);
     }
-    if (allCards[k].cardRound === 2) {
-      roundTwoArray.push(allCards[k]);
+    if (allCards[i].cardRound === 2) {
+      roundTwoArray.push(allCards[i]);
     }
-    if (allCards[k].cardRound === 3) {
-      roundThreeArray.push(allCards[k]);
+    if (allCards[i].cardRound === 3) {
+      roundThreeArray.push(allCards[i]);
     }
   }
   allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray];
@@ -129,6 +129,7 @@ render();
 
 function handleClick() {
   endGameYesNo();
+  render();
   // console.log(event.target.title);
   // pickedCard = event.target.title;
 }
