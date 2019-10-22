@@ -40,16 +40,21 @@ button:hover{
 
  #imageContainer div{
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 7%;
   border:1px solid white;
   width: 20%;
-  height: 500px;
+  height: 50%;
   text-align: center;
-  margin-left: 9%;
+  margin-left: 5%;
+  /* margin-right: 5%; */
+  /* margin: 5% auto; */
   padding: 5px;
   color:white;
   background-color: black;
   opacity: 0.7;  
+  font-size: 18px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  
 }  
 
 
@@ -58,11 +63,11 @@ button:hover{
   border: 1px solid white;
   width: 20%;
   height: 50px;
-  /* float: right;
-  margin: 10px; */
+  /* float: right; */
+  margin: 10px;
   position: absolute;
   top:120px;
-  right: 100px;
+  right:100px;
 
 }
 footer{
