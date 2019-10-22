@@ -7,7 +7,7 @@ var card1AText = 'Greet the strangers!';
 var card1BText = 'Hide!';
 var card1CText = 'Run!';
 // Round 2
-var roundScenarioTwo = 'Your new neighbors don’t seem very friendly, in fact it looks as if they intend you harm.';
+var roundScenarioTwo = 'Your new neighbors don/’t seem very friendly, in fact it looks as if they intend you harm.';
 
 var card2AText = 'Stand your ground! How tough could they be?';
 var card2BText = 'Take the Rover: They can’t hurt what they cant catch!';

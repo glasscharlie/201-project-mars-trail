@@ -121,41 +121,41 @@ function Card(text, cardRound, gameOver, cardID) {
   allCards.push(this);
 }
 //Round 1
-new Card(`Good ${card1AText}`, 1, false, '1A');
-new Card(`Good ${card1BText}`, 1, false, '1B');
-new Card(`Good ${card1CText}`, 1, false, '1C');
-new Card(`Bad ${card1AText}`, 1, true, '1D');
-new Card(`Bad ${card1BText}`, 1, true, '1E');
+new Card(`${card1AText}`, 1, false, '1A');
+new Card(`${card1BText}`, 1, false, '1B');
+new Card(`${card1CText}`, 1, false, '1C');
+new Card(`${card1AText}`, 1, true, '1D');
+new Card(`${card1BText}`, 1, true, '1E');
 //Round 2
-new Card(`Good ${card2AText}`, 2, false, '2A');
-new Card(`Good ${card2BText}`, 2, false, '2B');
-new Card(`Good ${card2CText}`, 2, false, '2C');
-new Card(`Bad ${card2AText}`, 2, true, '2D');
-new Card(`Bad ${card2BText}`, 2, true, '2E');
+new Card(`${card2AText}`, 2, false, '2A');
+new Card(`${card2BText}`, 2, false, '2B');
+new Card(`${card2CText}`, 2, false, '2C');
+new Card(`${card2AText}`, 2, true, '2D');
+new Card(`${card2BText}`, 2, true, '2E');
 //Round 3
-new Card(`Good ${card3AText}`, 3, false, '3A');
-new Card(`Good ${card3BText}`, 3, false, '3B');
-new Card(`Bad ${card3CText}`, 3, true, '3C');
-new Card(`Bad ${card3AText}`, 3, true, '3D');
-new Card(`Bad ${card3BText}`, 3, true, '3E');
+new Card(`${card3AText}`, 3, false, '3A');
+new Card(`${card3BText}`, 3, false, '3B');
+new Card(`${card3CText}`, 3, true, '3C');
+new Card(`${card3AText}`, 3, true, '3D');
+new Card(`${card3BText}`, 3, true, '3E');
 //Round 4
-new Card(`Good ${card4AText}`, 4, false, '4A');
-new Card(`Good ${card4BText}`, 4, false, '4B');
-new Card(`Bad ${card4CText}`, 4, true, '4C');
-new Card(`Bad ${card4AText}`, 4, true, '4D');
-new Card(`Bad ${card4BText}`, 4, true, '4E');
+new Card(`${card4AText}`, 4, false, '4A');
+new Card(`${card4BText}`, 4, false, '4B');
+new Card(`${card4CText}`, 4, true, '4C');
+new Card(`${card4AText}`, 4, true, '4D');
+new Card(`${card4BText}`, 4, true, '4E');
 //Round 5
-new Card(`Good ${card5AText}`, 5, false, '5A');
-new Card(`Good ${card5BText}`, 5, false, '5B');
-new Card(`Bad ${card5CText}`, 5, true, '5C');
-new Card(`Bad ${card5AText}`, 5, true, '5D');
-new Card(`Bad ${card5BText}`, 5, true, '5E');
+new Card(`${card5AText}`, 5, false, '5A');
+new Card(`${card5BText}`, 5, false, '5B');
+new Card(`${card5CText}`, 5, true, '5C');
+new Card(`${card5AText}`, 5, true, '5D');
+new Card(`${card5BText}`, 5, true, '5E');
 //Round 6
-new Card(`Good ${card6AText}`, 6, false, '6A');
-new Card(`Good ${card6BText}`, 6, false, '6B');
-new Card(`Bad ${card6CText}`, 6, true, '6C');
-new Card(`Bad ${card6AText}`, 6, true, '6D');
-new Card(`Bad ${card6BText}`, 6, true, '6E');
+new Card(`${card6AText}`, 6, false, '6A');
+new Card(`${card6BText}`, 6, false, '6B');
+new Card(`${card6CText}`, 6, true, '6C');
+new Card(`${card6AText}`, 6, true, '6D');
+new Card(`${card6BText}`, 6, true, '6E');
 
 //Put allCards into array of arrays
 function getRounds() {
