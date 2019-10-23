@@ -1,6 +1,7 @@
+'use strict';
+
 var players = JSON.parse(localStorage.Player);
 console.log (players);
-
 
 function generateTable() {
 
