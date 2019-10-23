@@ -46,7 +46,7 @@ function uniqueCardGenerator() {
   // console.log('line 41', allRoundCards[round][uniqueCardArray[2]].gameOver);
   if (allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[1]].gameOver && allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[2]].gameOver) {
     console.log('I was here.');
-    for (var i=0; i<allRoundCards[round].length; i++) {
+    for (var i = 0; i < allRoundCards[round].length; i++) {
       if (allRoundCards[round][i].gameOver !== allRoundCards[round][uniqueCardArray[0]].gameOver) {
         var randomIndex = makeRandom(2);
         uniqueCardArray[randomIndex] = i;
@@ -67,19 +67,52 @@ function respondToCardPick() {
   }
 }
 
+// MouseOver and Mouse Out: display Side 2 of Card when hover with mouse, goes back to Side 2 text when mouse moves off card.
+document.getElementById("left").addEventListener("mouseover", mouseOver);
+document.getElementById("left").addEventListener("mouseout", mouseOut);
+
+document.getElementById("center").addEventListener("mouseover", mouseOver);
+document.getElementById("center").addEventListener("mouseout", mouseOut);
+
+document.getElementById("right").addEventListener("mouseover", mouseOver);
+document.getElementById("right").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  if (event.target.id === 'left') {
+    leftCardEl.textContent = leftCard.teaserText;
+  } else if (event.target.id === 'center') {
+    centerCardEl.textContent = middleCard.teaserText;
+  } else if (event.target.id === 'right') {
+    rightCardEl.textContent = rightCard.teaserText;
+  }
+}
+
+function mouseOut() {
+  if (event.target.id === 'left') {
+    leftCardEl.textContent = leftCard.text;
+  } else if (event.target.id === 'center') {
+    centerCardEl.textContent = middleCard.text;
+  } else if (event.target.id === 'right') {
+    rightCardEl.textContent = rightCard.text;
+  }
+}
+
 function getCards() {
   uniqueCardGenerator();
   topCard = roundScenarioText[round];
   leftCard = allRoundCards[round][uniqueCardArray[0]];
+  console.log('leftCard ', leftCard);
   middleCard = allRoundCards[round][uniqueCardArray[1]];
+  console.log('middleCard ', middleCard);
   rightCard = allRoundCards[round][uniqueCardArray[2]];
-  console.log(leftCard, middleCard, rightCard);
+  console.log('rightCard ', rightCard);
   uniqueCardArray = [];
 }
 
 function endGameYesNo() {
   pickedCardID = event.target.title;
   console.log(pickedCardID);
+  console.log('look! ', event.target.id);
   for (var i = 0; i < allCards.length; i++) {
     if (allCards[i].cardID === pickedCardID) {
       endGame = allCards[i].gameOver;
@@ -186,12 +219,12 @@ new Card(`${card6BText}`, 6, true, '6E', 'card6ETeaserText', 'card6BResponseText
 
 //Put allCards into array of arrays
 function getRounds() {
-  for (var j = 0;j < 6;j++) {
-    console.log('j: ',j);
+  for (var j = 0; j < 6; j++) {
+    console.log('j: ', j);
     roundArray = [];
     for (var i = 0; i < allCards.length; i++) {
-    // console.log(allCards[i].cardRound);
-      if (allCards[i].cardRound === (j+1)) {
+      // console.log(allCards[i].cardRound);
+      if (allCards[i].cardRound === (j + 1)) {
         roundArray.push(allCards[i]);
       }
     }
@@ -252,7 +285,7 @@ function getStorageData() {
     console.log('PERSON', person);
 
   }
-  if(localStorage.Player) {
+  if (localStorage.Player) {
     allPlayers = JSON.parse(localStorage.Player);
     console.log('test', allPlayers);
 
