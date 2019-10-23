@@ -232,16 +232,17 @@ function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
     console.log('PERSON', person);
+   
   }
   if(localStorage.Player) {
     allPlayers = JSON.parse(localStorage.Player);
     console.log('test', allPlayers);
-    new Player(person, playerScore);
-    localStorage.Player = JSON.stringify(allPlayers);
+    
   }
   // console.log (localStorage.Player);
   // console.log (allPlayers);
   new Player(person, playerScore);
+  localStorage.Player = JSON.stringify(allPlayers);
 }
 
 
