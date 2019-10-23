@@ -35,6 +35,8 @@ body{
     margin: 25px auto;
     -webkit-transition: 350ms;
     transition: 350ms;
+    font-family:'PT Sans Narrow', sans-serif;
+  font-size: 18px;
   }
   button:hover{
     background-color: rgb(78, 78, 78);
@@ -42,14 +44,16 @@ body{
     
   }
 
-  /* td{
+  th{
     border: 1px solid white;
     background-color: rgb(54, 52, 52);
     color: white;
     width: 150px;
     padding: 5px;
-  } */
+    font-family:'PT Sans Narrow', sans-serif;
+    font-size: 18px;
+  } 
 
-  /* td:hover{
+  th:hover{
     background-color: black;
-  } */
+  }
