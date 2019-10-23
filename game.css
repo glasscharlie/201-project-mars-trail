@@ -103,6 +103,7 @@ button:hover{
     blink-caret .75s step-end infinite;
 }
 
+
 /* The typing effect */
 @-webkit-keyframes typing {
   from { width: 0 }
