@@ -63,7 +63,7 @@ button{
   font-family:'Audiowide', cursive;
 }
 button:hover{
-    background-color: rgb(78, 78, 78);
+  background-color: rgb(78, 78, 78);
   color: white;
 }
 
@@ -84,7 +84,6 @@ a button{
   transition: 350ms;
   margin-left: 10%;
   font-family: 'PT Sans Narrow', sans-serif;
-  /* margin-bottom: 140px; */
   font-size: 20px;
   font-family:'Audiowide', cursive;
 
@@ -135,7 +134,7 @@ footer{
 .popup-trigger {
   display: block;
   width: 100px;
-  text-align: center;
+  /* text-align: center; */
   background: #aaa;
   margin: 10px auto;
   padding: 20px;
@@ -193,7 +192,4 @@ footer{
     width: 70%;
   }
 }
-.content li{
-  text-align: center;
-  
-}
+
