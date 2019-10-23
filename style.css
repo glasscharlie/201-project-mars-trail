@@ -92,11 +92,8 @@ a button{
 }
 #Start > input[type=submit]:nth-child(2):hover{
   background-color: rgb(78, 78, 78);
-  color: white;
-  
+  color: white;  
 }
-
-
 footer{
   text-align: center;
   border: 1px solid rgb(184, 184, 184);
@@ -106,7 +103,6 @@ footer{
   position: absolute;
   bottom: 0;
 }
-
 .overlay {
   position: fixed;
   top: 0;
@@ -161,11 +157,10 @@ footer{
   padding: 20px;
   background: black;
   border-radius: 5px;
-  /* width: 30%; */
+  width: 50%; 
   position: relative;
   -webkit-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
-
 }
 .popup h2 {
   margin-top: 0;
