@@ -98,6 +98,7 @@ function endGameYesNo() {
         centerCardEl.remove();
         rightCardEl.remove();
         topCardEl.remove();
+        responseEl.remove();
         var gameOverEl = document.createElement('div');
         gameOverEl.textContent = 'You Win';
         gameOverEl.id = 'gameOverElement';
@@ -113,6 +114,7 @@ function endGameYesNo() {
         centerCardEl.remove();
         rightCardEl.remove();
         topCardEl.remove();
+        responseEl.remove();
         gameOverEl = document.createElement('div');
         gameOverEl.textContent = 'GAME OVER';
         gameOverEl.id = 'gameOverElement';
