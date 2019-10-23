@@ -1,4 +1,5 @@
 //Global Variables
+var bodyEl = document.getElementById('body');
 var topCardEl = document.getElementById('situation');
 var leftCardEl = document.getElementById('left');
 var centerCardEl = document.getElementById('center');
@@ -205,7 +206,7 @@ function render() {
   respondToCardPick();
   getCards();
   topCardEl.textContent = topCard;
-  containerEl.appendChild(topCardEl);
+  bodyEl.appendChild(topCardEl);
 
   leftCardEl.textContent = leftCard.text;
   leftCardEl.title = leftCard.cardID;
