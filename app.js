@@ -9,12 +9,14 @@ var responseEl = document.getElementById('responseToCardPick');
 var counterEl = document.getElementById('Counter');
 var round = 0;
 var playerScore = 0;
+var playerTime = 0;
 counterEl.textContent = `Current Score: ${playerScore}`;
 var allPlayers = [];
 var allCards = [];
 var maxRounds = 5;
 var uniqueCardArray = [];
 var allRoundCards = [];
+var gameStart = new Date();
 // var roundOneArray = [];
 // var roundTwoArray = [];
 // var roundThreeArray = [];
@@ -106,6 +108,10 @@ function endGameYesNo() {
         console.log('GAME OVER Win!!!!!');
         playerScore++;
         counterEl.textContent = `Current Score: ${playerScore}`;
+        var gameEndWin = new Date();
+        var timeWin = (gameEndWin - gameStart) / 1000;
+        console.log('time win', timeWin);
+        playerTime = timeWin;
         getStorageData();
       }
       else {
@@ -120,10 +126,15 @@ function endGameYesNo() {
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
         console.log('GAME OVER lose!!!!!');
+        var gameEndLose = new Date();
+        var timeLose = (gameEndLose - gameStart) / 1000;
+        console.log('time lost', timeLose);
+        playerTime = timeLose;
         getStorageData();
       }
     }
   }
+  console.log('TIME: ', playerTime);
 }
 
 //Card Object
@@ -227,9 +238,10 @@ function handleClick() {
 }
 
 
-function Player(name, score) {
+function Player(name, score, time) {
   this.name = name;
   this.score = score;
+  this.time = time;
   // this.cardID = cardID;
   allPlayers.push(this);
 }
@@ -238,16 +250,16 @@ function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
     console.log('PERSON', person);
-   
+
   }
   if(localStorage.Player) {
     allPlayers = JSON.parse(localStorage.Player);
     console.log('test', allPlayers);
-    
+
   }
   // console.log (localStorage.Player);
   // console.log (allPlayers);
-  new Player(person, playerScore);
+  new Player(person, playerScore, playerTime);
   localStorage.Player = JSON.stringify(allPlayers);
 }
 
