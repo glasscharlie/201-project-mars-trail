@@ -16,7 +16,7 @@ function sortTime() {
       console.log('players1 test1',players[i]);
       console.log('player2 test1',players[i + 1]);
       if (players[i].score === players[i + 1].score) {
-        if (players[i].time < players[i + 1].time) {
+        if (players[i].time > players[i + 1].time) {
           var a = players[i];
           var b = players[i + 1];
           players[i] = b;
