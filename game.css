@@ -41,16 +41,15 @@ button:hover{
   color: white; 
 }
 
-
- #imageContainer li {
+ #imageContainer li { /*here was li*/
   list-style-type: none;
-  float: left;
-  margin-top: 100px;
+  
+  display: block; 
+  position: absolute;
+  top:250px;
   border:1px solid white;
-  width: 20%;
-  height: 500px;
-  text-align: center;
-  margin-left: 9%;
+  width: 40%;
+  text-align: center; 
   padding: 5px;
   color:white;
   background-color: black;
@@ -61,6 +60,12 @@ button:hover{
   transition: 0.5s;
 
 } 
+
+
+
+
+
+
  #imageContainer li:hover{
  -webkit-transform: scale(1.1);
         transform: scale(1.1);
@@ -78,23 +83,32 @@ button:hover{
   
 
 }
+#responseToCardPick{
+  border: 1px solid white;
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  right: 130px;
+  top: 250px;
+  
+}
 
 #situation {
-  padding: 20px;
+  /* padding: 20px; */
   /* margin: 10px; */
-  height: 50px;
+  /* height: 50px; */
   position: absolute;
   left: 100px;
   /* text-align: center; */
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
-  border: 1px solid rgb(184, 184, 184);
+  /* border: 1px solid rgb(184, 184, 184); */
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   /* border-right: .15em solid orange; The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 10px auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 1px; /* Adjust as needed */
+  margin: 5px auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: 1px; Adjust as needed */
   -webkit-animation: 
     typing 4s steps(40, end),
     blink-caret .75s step-end infinite;;
