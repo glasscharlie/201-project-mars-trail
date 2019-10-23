@@ -13,12 +13,13 @@ var allCards = [];
 var maxRounds = 5;
 var uniqueCardArray = [];
 var allRoundCards = [];
-var roundOneArray = [];
-var roundTwoArray = [];
-var roundThreeArray = [];
-var roundFourArray = [];
-var roundFiveArray = [];
-var roundSixArray = [];
+// var roundOneArray = [];
+// var roundTwoArray = [];
+// var roundThreeArray = [];
+// var roundFourArray = [];
+// var roundFiveArray = [];
+// var roundSixArray = [];
+var roundArray = [];
 var topCard;
 var leftCard;
 var middleCard;
@@ -159,28 +160,18 @@ new Card(`${card6BText}`, 6, true, '6E');
 
 //Put allCards into array of arrays
 function getRounds() {
-  for (var i = 0; i < allCards.length; i++) {
+  for (var j = 0;j < 6;j++) {
+    console.log('j: ',j);
+    roundArray = [];
+    for (var i = 0; i < allCards.length; i++) {
     // console.log(allCards[i].cardRound);
-    if (allCards[i].cardRound === 1) {
-      roundOneArray.push(allCards[i]);
+      if (allCards[i].cardRound === (j+1)) {
+        roundArray.push(allCards[i]);
+      }
     }
-    if (allCards[i].cardRound === 2) {
-      roundTwoArray.push(allCards[i]);
-    }
-    if (allCards[i].cardRound === 3) {
-      roundThreeArray.push(allCards[i]);
-    }
-    if (allCards[i].cardRound === 4) {
-      roundFourArray.push(allCards[i]);
-    }
-    if (allCards[i].cardRound === 5) {
-      roundFiveArray.push(allCards[i]);
-    }
-    if (allCards[i].cardRound === 6) {
-      roundSixArray.push(allCards[i]);
-    }
+    allRoundCards[j] = roundArray;
   }
-  allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray, roundFourArray, roundFiveArray, roundSixArray];
+  // allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray, roundFourArray, roundFiveArray, roundSixArray];
 }
 getRounds();
 
