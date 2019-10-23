@@ -1,7 +1,8 @@
 'use strict';
-
-var players = JSON.parse(localStorage.Player);
-console.log (players);
+if (localStorage.Player) {
+  var players = JSON.parse(localStorage.Player);
+  console.log (players);
+}
 
 function generateTable() {
 
