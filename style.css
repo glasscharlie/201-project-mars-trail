@@ -12,35 +12,23 @@ h1{
   text-align: center;
   font-family: 'Audiowide', cursive;
   }
-h2{
-    color: white;
-    font-family: 'Audiowide', cursive;
-  }
-
 img{
   width: 40%;
   height: 15%;
-  float: right;
+  margin-left: 30%;
   margin-bottom: 30px;
   margin-top: 48px;
 }
 ol{
   border: 1px solid rgb(247, 247, 247);
-  width:50%;
-  background-color: black;
-  opacity: 0.8;
 }
 li{
   font-size: 20px;
   color: white;
   padding: 5px;
-  /* height: 60%;
-  width: 40%; */
   margin: 5px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  
+  font-family: 'PT Sans Narrow', sans-serif;  
 }
-
 a{
   color: white;
   font-size: 20px;
@@ -48,33 +36,41 @@ a{
   margin-right: 20px;
   margin: 10px;
   padding: 5px;
-  /* border: 1px solid white; */
   position: relative;
   top: 20px;
   -webkit-transition: 550ms;
   transition: 550ms;
-  /* border-radius: 70%; */
   font-family: 'Audiowide', cursive;
   
 }
 a:hover{
-  background-color: rgb(172, 165, 165);
-  color:black;
+  color:rgb(209, 73, 19);
 }
 #Start{
   text-align: center;
   margin: 30px;
   margin-top: 130px;
-  /* background-color: black;
-  opacity: 0.6; */
 }
-fieldset{
-  text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  color: white;
-  font-size: 24px;
+
+button{
+  width: 200px;
   height: 50px;
+  -webkit-transition: 350ms;
+  transition: 350ms; 
+  margin-left: 10%;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  font-family:'Audiowide', cursive;
 }
+button:hover{
+    background-color: rgb(78, 78, 78);
+  color: white;
+}
+
+a button{
+  margin-left: 42%;
+}
+
 #newPlayer{
   width: 300px;
   height: 40px;
@@ -109,4 +105,100 @@ footer{
   width: 90%;
   position: absolute;
   bottom: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+#popup-window {
+  position: fixed;
+  display: none;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 90%;
+  height: 80%;
+  background: #ddd;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15);
+          box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15)
+          
+}
+.popup-trigger {
+  display: block;
+  width: 100px;
+  text-align: center;
+  background: #aaa;
+  margin: 10px auto;
+  padding: 20px;
+  cursor: pointer;
+}
+.x-close {
+  font-size: 50px;
+  line-height: 1;
+  float: right;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: black;
+  border-radius: 5px;
+  /* width: 30%; */
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+.box{
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+.content li{
+  text-align: center;
+  
 }

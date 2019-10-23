@@ -3,7 +3,7 @@
 //= ['Get to the ship', 'Fight the Martians', 'Collect Supplies', 'Fix the spaceship', 'Navigate course', 'Launch'];
 
 // Round 1
-var roundScenarioOne = 'Within the comfort of your outpost you spot a strange sight over the horizon. There are quite a few of them. They are not wearing a suit…';
+var roundScenarioOne = 'From your outpost you spot a strange sight over the horizon. There are quite a few of them…';
 
 var card1AText = 'Greet the strangers!';
 var card1ATeaserText = 'Maybe they come in peace?';
