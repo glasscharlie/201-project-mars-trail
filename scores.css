@@ -52,8 +52,21 @@ body{
     padding: 5px;
     font-family:'PT Sans Narrow', sans-serif;
     font-size: 18px;
+    height: 30px;
   } 
 
   th:hover{
     background-color: black;
   }
+
+  td{
+    border: 1px solid white;
+    background-color: rgb(54, 52, 52);
+    color: white;
+    width: 150px;
+    padding: 5px;
+    font-family:'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    height: 30px;
+  } 

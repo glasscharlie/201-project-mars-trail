@@ -23,12 +23,24 @@ while(players.length > 10){
 }
 // console.log('should be 10',players);
 
+
 function generateTable() {
 
   var body = document.getElementById('highscores');
   var tbl = document.createElement('table');
-  tableHead();
   var tblBody = document.createElement('tbody');
+
+  var newTHead = document.createElement('thead');
+  var newTR = document.createElement('tr');
+  var newTH = document.createElement('th');
+  newTH.textContent = 'Name';
+  newTR.appendChild(newTH);
+  newTHead.appendChild(newTR);
+  tbl.appendChild(newTHead);
+
+  newTH = document.createElement('th');
+  newTH.textContent = 'Score';
+  newTR.appendChild(newTH);
 
   for (var i = 0; i < players.length; i++) {
     var row = document.createElement('tr');
@@ -52,25 +64,9 @@ function generateTable() {
 
   body.appendChild(tbl);
   tbl.appendChild(tblBody);
+
+  
 }
 generateTable();
-
-function tableHead() {
-  var tablehead = document.getElementById('highscores');
-  var newTHead = document.createElement('thead');
-  var newTR = document.createElement('tr');
-  var newTH = document.createElement('th');
-  newTH.textContent = 'Name';
-  newTR.appendChild(newTH);
-  newTHead.appendChild(newTR);
-  tablehead.appendChild(newTHead);
-
-  newTH = document.createElement('th');
-  newTH.textContent = 'Score';
-  newTR.appendChild(newTH);
-  return newTHead;
-
-}
-
 
 
