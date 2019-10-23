@@ -3,20 +3,43 @@
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
 }
-console.log(players);
-function dynamicSort(property) {
-  var sortOrder = 1;
-  if(property[0] === '-') {
-    sortOrder = -1;
-    property = property.substr(1);
+// console.log(players);
+
+
+players.sort(function(a, b){
+  return b.score-a.score;
+});
+
+function sortTime() {
+  for (var j = 0; j < players.length; j++){
+    for (var i = 0; i < players.length - 1; i++) {
+      console.log('players1 test1',players[i]);
+      console.log('player2 test1',players[i + 1]);
+      if (players[i].score === players[i + 1].score) {
+        if (players[i].time < players[i + 1].time) {
+          var a = players[i];
+          var b = players[i + 1];
+          players[i] = b;
+          players[i + 1] = a;
+          console.log('players1 test2',players[i]);
+          console.log('player2 test2',players[i + 1]);
+
+
+        }
+
+      }
+    }
   }
-  return function (a,b) {
-    var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
-    return result * sortOrder;
-  };
 }
-players.sort(dynamicSort('-score'));
-console.log('test',players);
+sortTime();
+
+// for (var i = 0; i < players.length; i++) {
+//   if (players[i].score === players [i - 1]) {
+//     players.sort(function(a, b) {
+//     return b.time - a.time;
+//   }
+// }
+// }
 
 
 
@@ -73,7 +96,7 @@ function generateTable() {
     }
 
   }
-  console.log('AHHHHHHH', players);
+  // console.log('AHHHHHHH', players);
   body.appendChild(tbl);
   tbl.appendChild(tblBody);
 
