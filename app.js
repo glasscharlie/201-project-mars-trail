@@ -183,7 +183,7 @@ function Card(text, cardRound, gameOver, cardID, teaserText, responseText) {
 //Round 1
 new Card(`${card1AText}`, 1, false, '1A', `${card1ATeaserText}`, `${card1AResponseText}`);
 new Card(`${card1BText}`, 1, false, '1B', `${card1BTeaserText}`, `${card1BResponseText}`);
-new Card(`${card1CText}`, 1, false, '1B', `${card1CTeaserText}`, `${card1CResponseText}`);
+new Card(`${card1CText}`, 1, false, '1C', `${card1CTeaserText}`, `${card1CResponseText}`);
 new Card(`${card1DText}`, 1, true, '1D', `${card1DTeaserText}`, `${card1DResponseText}`);
 new Card(`${card1EText}`, 1, true, '1E', `${card1ETeaserText}`, `${card1EResponseText}`);
 //Round 2
