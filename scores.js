@@ -3,7 +3,7 @@
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
 }
-
+console.log(players);
 function dynamicSort(property) {
   var sortOrder = 1;
   if(property[0] === '-') {
@@ -16,12 +16,13 @@ function dynamicSort(property) {
   };
 }
 players.sort(dynamicSort('-score'));
-// console.log('test',players);
+console.log('test',players);
+
+
 
 while(players.length > 10){
   players.pop();
 }
-// console.log('should be 10',players);
 
 
 function generateTable() {
@@ -42,6 +43,10 @@ function generateTable() {
   newTH.textContent = 'Score';
   newTR.appendChild(newTH);
 
+  newTH = document.createElement('th');
+  newTH.textContent = 'Time';
+  newTR.appendChild(newTH);
+
   for (var i = 0; i < players.length; i++) {
     var row = document.createElement('tr');
     tblBody.appendChild(row);
@@ -60,12 +65,19 @@ function generateTable() {
       row.appendChild(cellTwo);
     }
 
-  }
+    for (var l = 0; l < 1; l++){
+      var cellThree = document.createElement('td');
+      var cellTextThree = document.createTextNode(players[i].time);
+      cellThree.appendChild(cellTextThree);
+      row.appendChild(cellThree);
+    }
 
+  }
+  console.log('AHHHHHHH', players);
   body.appendChild(tbl);
   tbl.appendChild(tblBody);
 
-  
+
 }
 generateTable();
 
