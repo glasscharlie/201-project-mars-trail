@@ -3,10 +3,12 @@ console.log (players);
 
 
 function generateTable() {
+
   var body = document.getElementById('highscores');
 
+
   var tbl = document.createElement('table');
-  console.log(typeof(tbl));
+  tableHead();
   var tblBody = document.createElement('tbody');
 
   for (var i = 0; i < players.length; i++) {
@@ -20,7 +22,7 @@ function generateTable() {
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
-    
+
     for (var k = 0; k < 1; k++){
       var cellTwo = document.createElement('td');
       var cellTextTwo = document.createTextNode(players[i].score);
@@ -32,6 +34,27 @@ function generateTable() {
 
   body.appendChild(tbl);
   tbl.appendChild(tblBody);
-  tbl.setAttribute('border', 2);
+  // tbl.setAttribute('border', 2);
+  // newTH.setAttribute('border', 2);
 }
 generateTable();
+
+function tableHead() {
+  var tablehead = document.getElementById('highscores');
+  var newTHead = document.createElement('thead');
+  var newTR = document.createElement('tr');
+  var newTH = document.createElement('th');
+  newTH.textContent = 'Name';
+  newTR.appendChild(newTH);
+  newTHead.appendChild(newTR);
+  tablehead.appendChild(newTHead);
+
+  newTH = document.createElement('th');
+  newTH.textContent = 'Score';
+  newTR.appendChild(newTH);
+  return newTHead;
+
+}
+
+
+
