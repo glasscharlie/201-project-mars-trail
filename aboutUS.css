@@ -68,6 +68,8 @@ button{
   margin: 25px auto;
   -webkit-transition: 350ms;
   transition: 350ms;
+  font-family:'PT Sans Narrow', sans-serif;
+  font-size: 18px;
 }
 button:hover{
   background-color: rgb(78, 78, 78);
