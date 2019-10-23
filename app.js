@@ -208,7 +208,7 @@ new Card(`${card4EText}`, 4, true, '4E', `${card4ETeaserText}`, `${card4ERespons
 new Card(`${card5AText}`, 5, false, '5A', `${card5ATeaserText}`, `${card5AResponseText}`);
 new Card(`${card5BText}`, 5, false, '5B', `${card5BTeaserText}`, `${card5BResponseText}`);
 new Card(`${card5CText}`, 5, true, '5C', `${card5CTeaserText}`, `${card5CResponseText}`);
-new Card(`${card5AText}`, 5, true, '5D', `${card5DTeaserText}`, `${card5AResponseText}`);
+new Card(`${card5DText}`, 5, true, '5D', `${card5DTeaserText}`, `${card5DResponseText}`);
 new Card(`${card5EText}`, 5, true, '5E', `${card5ETeaserText}`, `${card5EResponseText}`);
 //Round 6
 new Card(`${card6AText}`, 6, false, '6A', `${card6ATeaserText}`, `${card6AResponseText}`);

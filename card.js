@@ -32,7 +32,7 @@ var card2AText = 'Stand your ground! How tough could they be?';
 var card2ATeaserText = 'Very. The answer is very tough.';
 var card2AResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
-var card2BText = "Take the Rover: They can’t hurt what they cant catch!";
+var card2BText = "Take the rover: They can’t hurt what they cant catch!";
 var card2BTeaserText = 'Oh right, Rover’s are slow. REALLY slow...Uh oh...';
 var card2BResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
@@ -49,9 +49,9 @@ var card2ETeaserText = 'Your music system has gotten their attention!';
 var card2EResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
 // Round 3
-var roundScenarioThree = ' You see the supply depot ahead, best to stock up.';
+var roundScenarioThree = 'You see the supply depot ahead, best to stock up.';
 
-var card3AText = ' Food and Water, humans need these things.';
+var card3AText = 'Look for food and water, humans need these things.';
 var card3ATeaserText = 'No point leaving the planet if YOU don’t make it back!';
 var card3AResponseText = 'You are glad you found the depot when you did, you wonder if there was more you should have taken, but you can never be sure how close the Martians are.';
 
