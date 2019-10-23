@@ -11,16 +11,12 @@ p{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   height: 50px;
-  margin-top: 20px;
-  
+  margin-top: 20px; 
 }
 #background{
   background-image: url(images/mars1.jpg); 
   height: 850px;
-  /* margin: 30px auto; */
   margin-top: 70px;
-  /* margin-bottom:50px; */
-
 }
  button{
   width: 100px;
@@ -42,12 +38,10 @@ button:hover{
 #imageContainer li {
   list-style-type: none;
   display: block; 
-  /* position: absolute;*/
   top:233px;
   margin-top: 30px;
   border:1px solid white;
   width: 40%;
-  /* height: 500px; */
   text-align: center;
   margin-left: 4%;
   padding: 5px;
@@ -66,7 +60,7 @@ button:hover{
 #responseToCardPick{
   border: 1px solid white;
   width: 700px;
-  height: 500px;
+  padding: 250px 0 250px 0;
   position: absolute;
   right: 130px;
   top: 250px;
@@ -76,33 +70,27 @@ button:hover{
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
-  vertical-align: center;  
+  
 }
-
 #Counter{
   border: 1px solid white;
   width: 20%;
-  height: 50px;
+  padding: 20px 0 20px 0;
   background-color: rgb(36, 35, 35);
   color: white;
-  /* text-align: center;  */
+  text-align: center; 
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   vertical-align: center;
 }
-.situation-wrapper{
-  width: 20%;
-}
 #situation {
   padding: 20px;
-  /* margin: 10px; */
   height: 50px;
   position: absolute;
   top: 150px;
   left: 80px;
-  /* text-align: center; */
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 26px;
   color: white;
   border: 1px solid rgb(184, 184, 184);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -134,14 +122,12 @@ button:hover{
   from, to { border-color: transparent }
   /* 50% { border-color: rgb(253, 253, 253); } */
 }
-
 #gameOverElement {
   color: white;
   height: 300px;
   font-size: 20em;
   text-align: center;
 }
-
 footer{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
