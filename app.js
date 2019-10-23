@@ -171,7 +171,6 @@ function getRounds() {
     }
     allRoundCards[j] = roundArray;
   }
-  // allRoundCards = [roundOneArray, roundTwoArray, roundThreeArray, roundFourArray, roundFiveArray, roundSixArray];
 }
 getRounds();
 
