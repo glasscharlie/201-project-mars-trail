@@ -125,50 +125,51 @@ function endGameYesNo() {
 }
 
 //Card Object
-function Card(text, cardRound, gameOver, cardID, responseText) {
+function Card(text, cardRound, gameOver, cardID, teaserText, responseText) {
   this.text = text;
+  this.teaserText = teaserText;
+  this.responseText = responseText;
   this.cardRound = cardRound;
   this.cardID = cardID;
   this.gameOver = gameOver;
-  this.responseText = responseText;
   allCards.push(this);
 }
 //Round 1
-new Card(`${card1AText}`, 1, false, '1A', 'card1AResponseText');
-new Card(`${card1BText}`, 1, false, '1B', 'card1BResponseText');
-new Card(`${card1CText}`, 1, false, '1C', 'card1CResponseText');
-new Card(`${card1AText}`, 1, true, '1D', 'card1AResponseText');
-new Card(`${card1BText}`, 1, true, '1E', 'card1BResponseText');
+new Card(`${card1AText}`, 1, false, '1A', 'card1ATeaserText', 'card1AResponseText');
+new Card(`${card1BText}`, 1, false, '1B', 'card1BTeaserText', 'card1BResponseText');
+new Card(`${card1CText}`, 1, false, '1B', 'card1BTeaserText', 'card1CResponseText');
+new Card(`${card1AText}`, 1, true, '1D', 'card1DTeaserText', 'card1AResponseText');
+new Card(`${card1BText}`, 1, true, '1E', 'cardETeaserText', 'card1BResponseText');
 //Round 2
-new Card(`${card2AText}`, 2, false, '2A', 'card2AResponseText');
-new Card(`${card2BText}`, 2, false, '2B', 'card2BResponseText');
-new Card(`${card2CText}`, 2, false, '2C', 'card2CResponseText');
-new Card(`${card2AText}`, 2, true, '2D', 'card2AResponseText');
-new Card(`${card2BText}`, 2, true, '2E', 'card2BResponseText');
+new Card(`${card2AText}`, 2, false, '2A', 'card2ATeaserText', 'card2AResponseText');
+new Card(`${card2BText}`, 2, false, '2B', 'card2BTeaserText', 'card2BResponseText');
+new Card(`${card2CText}`, 2, false, '2C', 'card2CTeaserText', 'card2CResponseText');
+new Card(`${card2AText}`, 2, true, '2D', 'cardDTeaserText', 'card2AResponseText');
+new Card(`${card2BText}`, 2, true, '2E', 'card2ETeaserText', 'card2BResponseText');
 //Round 3
-new Card(`${card3AText}`, 3, false, '3A', 'card3AResponseText');
-new Card(`${card3BText}`, 3, false, '3B', 'card3BResponseText');
-new Card(`${card3CText}`, 3, true, '3C', 'card3CResponseText');
-new Card(`${card3AText}`, 3, true, '3D', 'card3AResponseText');
-new Card(`${card3BText}`, 3, true, '3E', 'card3BResponseText');
+new Card(`${card3AText}`, 3, false, '3A', 'card3ATeaserText', 'card3AResponseText');
+new Card(`${card3BText}`, 3, false, '3B', 'card3BTeaserText', 'card3BResponseText');
+new Card(`${card3CText}`, 3, true, '3C', 'card3CTeaserText', 'card3CResponseText');
+new Card(`${card3AText}`, 3, true, '3D', 'card3DTeaserText', 'card3AResponseText');
+new Card(`${card3BText}`, 3, true, '3E', 'card3ETeaserText', 'card3BResponseText');
 //Round 4
-new Card(`${card4AText}`, 4, false, '4A', 'card4AResponseText');
-new Card(`${card4BText}`, 4, false, '4B', 'card4BResponseText');
-new Card(`${card4CText}`, 4, true, '4C', 'card4CResponseText');
-new Card(`${card4AText}`, 4, true, '4D', 'card4AResponseText');
-new Card(`${card4BText}`, 4, true, '4E', 'card4BResponseText');
+new Card(`${card4AText}`, 4, false, '4A', 'card4ATeaserText', 'card4AResponseText');
+new Card(`${card4BText}`, 4, false, '4B', 'card4BTeaserText', 'card4BResponseText');
+new Card(`${card4CText}`, 4, true, '4C', 'card4CTeaserText', 'card4CResponseText');
+new Card(`${card4AText}`, 4, true, '4D', 'card4DTeaserText', 'card4AResponseText');
+new Card(`${card4BText}`, 4, true, '4E', 'card4ETeaserText', 'card4BResponseText');
 //Round 5
-new Card(`${card5AText}`, 5, false, '5A', 'card5AResponseText');
-new Card(`${card5BText}`, 5, false, '5B', 'card5BResponseText');
-new Card(`${card5CText}`, 5, true, '5C', 'card5CResponseText');
-new Card(`${card5AText}`, 5, true, '5D', 'card5AResponseText');
-new Card(`${card5BText}`, 5, true, '5E', 'card5BResponseText');
+new Card(`${card5AText}`, 5, false, '5A', 'card5ATeaserText', 'card5AResponseText');
+new Card(`${card5BText}`, 5, false, '5B', 'card5BTeaserText', 'card5BResponseText');
+new Card(`${card5CText}`, 5, true, '5C', 'card5CTeaserText', 'card5CResponseText');
+new Card(`${card5AText}`, 5, true, '5D', 'card5DTeaserText', 'card5AResponseText');
+new Card(`${card5BText}`, 5, true, '5E', 'card5ETeaserText', 'card5BResponseText');
 //Round 6
-new Card(`${card6AText}`, 6, false, '6A', 'card6AResponseText');
-new Card(`${card6BText}`, 6, false, '6B', 'card6BResponseText');
-new Card(`${card6CText}`, 6, true, '6C', 'card6CResponseText');
-new Card(`${card6AText}`, 6, true, '6D', 'card6AResponseText');
-new Card(`${card6BText}`, 6, true, '6E', 'card6BResponseText');
+new Card(`${card6AText}`, 6, false, '6A', 'card6ATeaserText', 'card6AResponseText');
+new Card(`${card6BText}`, 6, false, '6B', 'card6BTeaserText', 'card6BResponseText');
+new Card(`${card6CText}`, 6, true, '6C', 'card6CTeaserText', 'card6CResponseText');
+new Card(`${card6AText}`, 6, true, '6D', 'card6DTeaserText', 'card6AResponseText');
+new Card(`${card6BText}`, 6, true, '6E', 'card6ETeaserText', 'card6BResponseText');
 
 //Put allCards into array of arrays
 function getRounds() {
