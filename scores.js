@@ -1,4 +1,5 @@
 'use strict';
+
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
   console.log (players);
