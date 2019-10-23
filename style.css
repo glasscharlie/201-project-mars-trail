@@ -40,6 +40,15 @@ li{
   font-family: 'PT Sans Narrow', sans-serif;
   
 }
+#responseToCardPick {
+  font-size: 20px;
+  color: white;
+  padding: 5px;
+  /* height: 60%;
+  width: 40%; */
+  margin: 5px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 a{
   color: white;
   font-size: 20px;
