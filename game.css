@@ -2,8 +2,6 @@ body{
   width: 90%;
   margin: 0 auto;
   background-image: url(images/space.png);
- 
-  /* background-color: rgb(168, 163, 163); */
 }
 p{
   font-family: 'Courier New', Courier, monospace;
@@ -33,24 +31,25 @@ p{
   position: relative;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
-
-  
 }
 button:hover{
   background-color: rgb(78, 78, 78);
   color: white; 
 }
-
-
- #imageContainer li {
+.selectionCard{
+  position:  relative;
+} 
+#imageContainer li {
   list-style-type: none;
-  float: left;
-  margin-top: 100px;
+  display: block; 
+  /* position: absolute;*/
+  top:233px;
+  margin-top: 30px;
   border:1px solid white;
-  width: 20%;
-  height: 500px;
+  width: 40%;
+  /* height: 500px; */
   text-align: center;
-  margin-left: 9%;
+  margin-left: 4%;
   padding: 5px;
   color:white;
   background-color: black;
@@ -59,12 +58,27 @@ button:hover{
   font-size: 40px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-
-} 
- #imageContainer li:hover{
+ }
+   #imageContainer li:hover{
  -webkit-transform: scale(1.1);
         transform: scale(1.1);
 }
+#responseToCardPick{
+  border: 1px solid white;
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  right: 130px;
+  top: 250px;
+  color: white;
+  background-color: black;
+  opacity: 0.9;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  vertical-align: center;  
+}
+
 #Counter{
   border: 1px solid white;
   width: 20%;
@@ -75,8 +89,6 @@ button:hover{
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   vertical-align: center;
-  
-
 }
 
 #situation {
@@ -84,17 +96,17 @@ button:hover{
   /* margin: 10px; */
   height: 50px;
   position: absolute;
-  left: 100px;
+  top: 150px;
+  left: 80px;
   /* text-align: center; */
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   border: 1px solid rgb(184, 184, 184);
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   /* border-right: .15em solid orange; The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 10px auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 1px; /* Adjust as needed */
+  margin: 1px auto; /* Gives that scrolling effect as the typing happens */
   -webkit-animation: 
     typing 4s steps(40, end),
     blink-caret .75s step-end infinite;;
@@ -102,8 +114,6 @@ button:hover{
     typing 4s steps(40, end),
     blink-caret .75s step-end infinite;
 }
-
-
 /* The typing effect */
 @-webkit-keyframes typing {
   from { width: 0 }
@@ -113,7 +123,6 @@ button:hover{
   from { width: 0 }
   to { width: 90% }
 }
-
 /* The typewriter cursor effect */
 @-webkit-keyframes blink-caret {
   from, to { border-color: transparent }
