@@ -108,6 +108,21 @@ function uniqueCardGenerator() {
   // console.log('line 49', allRoundCards[round][uniqueCardArray[2]].gameOver);
 }
 
+/**********************************************************************/
+/* function respondToCardPick()                                       */
+/* Changes the text in responseEl at the end of each round            */
+/*     - each instantiation of Card has a responseText property       */
+/*       that stores a string.                                        */
+/*     - pickedCardID attached to an event listener, such that        */
+/*       the cardID property of the card the player chose gets        */
+/*       pushed into the title attribute of the element holding       */
+/*       the card.                                                    */
+/*     - loops through all cards and finds the card with a cardID     */
+/*       that matches pickedCardID.                                   */
+/*     - when it finds the card that the player picked, it grabs the  */
+/*       responseText property for that card and renders it to        */
+/*       responseEl.                                                  */
+/**********************************************************************/
 function respondToCardPick() {
   responseEl.textContent = '...';
   for (var i = 0; i < allCards.length; i++) {
