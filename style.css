@@ -1,20 +1,21 @@
+/* adding background picture and size to body*/
 body{
   width: 90%;
   margin: 0 auto;
   background-image: url(images/space.png);
 }
-
+/* created box for header + slyle for text*/
 h1{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   color: white;
-  /* height:80px; */
   padding: 25px 0 25px 0;
   text-align: center;
   font-family: 'Audiowide', cursive;
   font-size: 40px;
   margin-top: 20px;
   }
+/* added img*/
 img{
   width: 40%;
   height: 15%;
@@ -22,9 +23,11 @@ img{
   margin-bottom: 30px;
   margin-top: 48px;
 }
+/* created box for Instructions elements*/
 ol{
   border: 1px solid rgb(247, 247, 247);
 }
+/* styling text inside Instructions box*/
 li{
   font-size: 20px;
   color: white;
@@ -32,30 +35,11 @@ li{
   margin: 5px;
   font-family: 'PT Sans Narrow', sans-serif;  
 }
-a{
-  color: white;
-  font-size: 20px;
-  display: inline;
-  margin-right: 20px;
-  margin: 10px;
-  padding: 5px;
-  position: relative;
-  top: 20px;
-  -webkit-transition: 550ms;
-  transition: 550ms;
-  font-family: 'Audiowide', cursive;
-  
+/* added osition to "Instruction button"*/
+a button{
+  margin-left: 42%;
 }
-a:hover{
-  color:rgb(209, 73, 19);
-}
-#Start{
-  text-align: center;
-  margin: 30px;
-  margin-top: 130px;
-}
-
-button{
+ button{
   width: 200px;
   height: 50px;
   -webkit-transition: 350ms;
@@ -68,17 +52,35 @@ button{
 button:hover{
   background-color: rgb(78, 78, 78);
   color: white;
+} 
+/* style links to the "about Us page" and "score"*/
+a{
+  color: white;
+  font-size: 20px;
+  display: inline;
+  margin-right: 20px;
+  margin: 10px;
+  padding: 5px;
+  position: relative;
+  top: 20px;
+  -webkit-transition: 550ms;
+  transition: 550ms;
+  font-family: 'Audiowide', cursive;  
+}
+a:hover{
+  color:rgb(209, 73, 19);
 }
 
-a button{
-  margin-left: 42%;
+/* style input box"user name" + "start button"*/
+#Start{
+  text-align: center;
+  margin: 30px;
+  margin-top: 130px;
 }
-
 #newPlayer{
   width: 300px;
   height: 40px;
 }
-
 #Start > input[type=submit]:nth-child(2){
   width: 200px;
   height: 50px;
@@ -88,14 +90,13 @@ a button{
   margin-left: 10%;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 20px;
-  font-family:'Audiowide', cursive;
-
-  
+  font-family:'Audiowide', cursive;  
 }
 #Start > input[type=submit]:nth-child(2):hover{
   background-color: rgb(78, 78, 78);
   color: white;  
 }
+/* added style to footer*/
 footer{
   text-align: center;
   border: 1px solid rgb(184, 184, 184);
@@ -105,6 +106,7 @@ footer{
   position: absolute;
   bottom: 0;
 }
+/* created popup effect for "Instruction button"*/
 .overlay {
   position: fixed;
   top: 0;
@@ -131,8 +133,7 @@ footer{
   background: #ddd;
   border: 1px solid #aaa;
   -webkit-box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15);
-          box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15)
-          
+          box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15)          
 }
 .popup-trigger {
   display: block;
