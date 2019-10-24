@@ -178,10 +178,10 @@ footer{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color:#06D85F;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color:red;
 }
 .popup .content {
   max-height: 30%;
