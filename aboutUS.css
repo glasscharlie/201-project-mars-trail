@@ -1,5 +1,4 @@
 body{
-  /* height: 3000px; */
   width: 90%;
   margin: 0 auto;
   background-image: url(images/space.png);
@@ -9,30 +8,39 @@ body{
 main {
   height: 1500px;
 }
-div {
+div.devs {
   height: 300px;
   margin-bottom: 5px;
+  animation: bounceIn 2s;
 }
 header {
   text-align: center;
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   height: 100px;
-  /* margin-bottom: 30px; */
 }
 h1{
   text-align: center;
   font-size: 40px;
-  /* height: 40px; */
-  background: rgb(36, 35, 35);
-  /* margin-top: 5px; */
-  
+  /* background: rgb(36, 35, 35); */
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 h2{
   text-align: center;
   font-size: 32px;
   /* margin-bottom: 10px; */
-  /* animation: bounceIn 2s; */
 }
 h3 {
   font-size: 38px;
