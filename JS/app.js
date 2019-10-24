@@ -172,29 +172,29 @@ function getCards() {
   uniqueCardGenerator();
   topCard = roundScenarioText[round];
   leftCard = allRoundCards[round][uniqueCardArray[0]];
-  console.log('leftCard ', leftCard);
+  // console.log('leftCard ', leftCard);
   middleCard = allRoundCards[round][uniqueCardArray[1]];
-  console.log('middleCard ', middleCard);
+  // console.log('middleCard ', middleCard);
   rightCard = allRoundCards[round][uniqueCardArray[2]];
-  console.log('rightCard ', rightCard);
+  // console.log('rightCard ', rightCard);
   uniqueCardArray = [];
 }
 
 function endGameYesNo() {
   pickedCardID = event.target.title;
-  console.log(pickedCardID);
-  console.log('look! ', event.target.id);
+  // console.log(pickedCardID);
+  // console.log('look! ', event.target.id);
   for (var i = 0; i < allCards.length; i++) {
     if (allCards[i].cardID === pickedCardID) {
       endGame = allCards[i].gameOver;
-      console.log(endGame);
-      console.log('line 53');
+      // console.log(endGame);
+      // console.log('line 53');
       if (endGame === false && round < maxRounds) {
         /// continue
         round++;
         playerScore++;
         counterEl.textContent = `Current Score: ${playerScore}`;
-        console.log('round: ', round);
+        // console.log('round: ', round);
         render();
       }
       else if (round === maxRounds && endGame === false) {
@@ -209,12 +209,12 @@ function endGameYesNo() {
         gameOverEl.textContent = 'You Win';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER Win!!!!!');
+        // console.log('GAME OVER Win!!!!!');
         playerScore++;
         counterEl.textContent = `Current Score: ${playerScore}`;
         var gameEndWin = new Date();
         var timeWin = (gameEndWin - gameStart) / 1000;
-        console.log('time win', timeWin);
+        // console.log('time win', timeWin);
         playerTime = timeWin;
         getStorageData();
       }
@@ -229,7 +229,7 @@ function endGameYesNo() {
         gameOverEl.textContent = 'GAME OVER';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER lose!!!!!');
+        // console.log('GAME OVER lose!!!!!');
         var gameEndLose = new Date();
         var timeLose = (gameEndLose - gameStart) / 1000;
         console.log('time lost', timeLose);
@@ -238,7 +238,7 @@ function endGameYesNo() {
       }
     }
   }
-  console.log('TIME: ', playerTime);
+  // console.log('TIME: ', playerTime);
 }
 
 //Card Object
@@ -333,7 +333,7 @@ render();
 
 function handleClick() {
   endGameYesNo();
-  console.log('endgame: ', endGame);
+  // console.log('endgame: ', endGame);
   // if (endGame !== true) {
 
   // }
