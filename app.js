@@ -36,19 +36,21 @@ var pickedCardID;
 
 containerEl.addEventListener('click', handleClick);
 
-//highest score rendering
+//if there is Data(player name) in localStorage, it grabs it and stores it in variable nameData
 if (localStorage.Data) {
   var nameData = JSON.parse(localStorage.Data);
 }
+//if there is Player Stats(name, score, time) in localStorage, it grabs it and stores it in variable players, and sorts player by score
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
-}
-if (localStorage.Player) {
-
   players.sort(function(a, b){
     return b.score-a.score;
   });
 }
+// function that shows players highest score on game page
+//if there is player stats in local storage, runs a for loop for the length of players variable
+//for length of players variable, check to see if player name is equal to names in the players array, if so it renders the score and stops the function
+//if player name is not in the array, it renders a highest score of 0
 function showHighestScore() {
   if (localStorage.player) {
     for (var i = 0; i < players.length; i++) {
@@ -64,9 +66,25 @@ function showHighestScore() {
 }
 showHighestScore();
 
+/**********************************************************************/
+/* function uniqueCardGenerator()                                     */
+/* 1. Generates an array of 3 random numbers.                         */
+/*    - each random number in the array will be used as               */
+/*      an index number to draw a random card from the allRoundCards  */
+/*      array at the appropriate round                                */
+/* 2. If the gameOver property is the same for all three cards at     */
+/*    those random indexes, the for loop goes through all the cards   */
+/*    in the appropriate round and finds the first card where the     */
+/*    gameOver property is the opposite.                              */
+/*    Then, a second random number is generated, stored to the        */
+/*    variable randomIndex, and the opposite card is substituted into */
+/*    uniqueCardArray at the random index.                            */
+/**********************************************************************/
 function uniqueCardGenerator() {
   while (uniqueCardArray.length < 3) {
+    // Generates a random number 0 to 4 because each array of Card instantiations has 5 cards.
     var random = makeRandom(5);
+    // Makes sure each number pushed to the array is unique.
     while (!uniqueCardArray.includes(random)) {
       uniqueCardArray.push(random);
     }
@@ -74,10 +92,14 @@ function uniqueCardGenerator() {
   // console.log('line 39', allRoundCards[round][uniqueCardArray[0]].gameOver);
   // console.log('line 40', allRoundCards[round][uniqueCardArray[1]].gameOver);
   // console.log('line 41', allRoundCards[round][uniqueCardArray[2]].gameOver);
+
+  // If statement checks to see if gameOver value for the 3 cards drawn at the random index numbers are all the same
   if (allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[1]].gameOver && allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[2]].gameOver) {
-    console.log('I was here.');
+    // console.log('I was here.');
+    // If gameOver for all 3 cards is the same, this loops over all the possible cards in the round and finds the first card with an opposite gameOver value.
     for (var i = 0; i < allRoundCards[round].length; i++) {
       if (allRoundCards[round][i].gameOver !== allRoundCards[round][uniqueCardArray[0]].gameOver) {
+        // Substitutes the card with an opposite value for gameOver into uniqueCardArray at a random spot.
         var randomIndex = makeRandom(2);
         uniqueCardArray[randomIndex] = i;
       }
@@ -300,7 +322,7 @@ function handleClick() {
   // pickedCard = event.target.title;
 }
 
-
+// player constuctor to store player data
 function Player(name, score, time) {
   this.name = name;
   this.score = score;
@@ -308,7 +330,10 @@ function Player(name, score, time) {
   allPlayers.push(this);
 }
 
-
+// function to store Player stats in localStorage
+//if there is Data(player name) in localStorage, it grabs it
+//if there is Player stats (name, score and time) in localStorage already, it grabs it
+//Creates a new player object and stores it in localStorage
 function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);

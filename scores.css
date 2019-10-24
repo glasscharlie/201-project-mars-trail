@@ -1,3 +1,4 @@
+/* adding background picture and some styling to body*/
 body{
     width: 90%;
     margin: 0 auto;
@@ -8,7 +9,7 @@ body{
     background-position: center; 
     background-size: cover;
   }
-
+  /* creating box with h1 text inside and background color*/
   h1{
     text-align: center;
     border: 1px solid rgb(184, 184, 184);
@@ -19,7 +20,7 @@ body{
     margin-bottom: 30px;
     font-family: 'PT Sans Narrow', sans-serif;
   }
-
+/* stiling footer*/
   footer{
   text-align: center;
   border: 1px solid rgb(184, 184, 184);
@@ -29,7 +30,7 @@ body{
   position: absolute;
   bottom: 0;
   }
-
+/* styling button "home" inside footer and adding hover*/
   button{
     width: 100px;
     height: 30px;
@@ -41,10 +42,9 @@ body{
   }
   button:hover{
     background-color: rgb(78, 78, 78);
-    color: white;
-    
+    color: white;  
   }
-
+/* creating box for "total score"*/
   th{
     border: 1px solid white;
     background-color: rgb(54, 52, 52);
@@ -55,11 +55,10 @@ body{
     font-size: 18px;
     height: 30px;
   } 
-
+  /* adding hover effect for 1st line of score*/
   th:hover{
     background-color: black;
   }
-
   td{
     border: 1px solid white;
     background-color: rgb(54, 52, 52);
