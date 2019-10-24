@@ -2,7 +2,7 @@
 body{
   width: 90%;
   margin: 0 auto;
-  background-image: url(images/space.png);
+  background-image: url(../images/space.png);
 }
 /*creating box for header where are 2 buttons "home", "score"*/
 .top {
@@ -28,7 +28,7 @@ button:hover{
 }
 /* adding secont background picture (with planets)and size*/
 #background{
-  background-image: url(images/mars1.jpg); 
+  background-image: url(../images/mars1.jpg); 
   height: 850px;
   margin-top: 70px;
 }
@@ -132,7 +132,7 @@ button:hover{
   font-size: 20em;
   text-align: center;
 
-  background-image: url(images/astro2.png);
+  background-image: url(../images/astro2.png);
   background-repeat: no-repeat;
   background-size: 200px 300px;
 

@@ -2,7 +2,7 @@
 body{
   width: 90%;
   margin: 0 auto;
-  background-image: url(images/space.png);
+  background-image: url(../images/space.png);
   color: white;
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -67,9 +67,9 @@ h3 {
   font-size: 38px;
   margin-top: 10px;
 }
-/* chenged position */
+/* changed position */
 section {
-  margin-top: 5px;
+  margin: 0 auto;
 }
 p{
   width: 85%;

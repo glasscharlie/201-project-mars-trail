@@ -2,7 +2,7 @@
 body{
     width: 90%;
     margin: 0 auto;
-    background-image: url(images/mars-scores.png);
+    background-image: url(../images/mars-scores.png);
     opacity: 0.9;
     background-repeat: no-repeat;
     height: 800px; 

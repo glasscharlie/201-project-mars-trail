@@ -2,7 +2,7 @@
 body{
   width: 90%;
   margin: 0 auto;
-  background-image: url(images/space.png);
+  background-image: url(../images/space.png);
 }
 /* created box for header + slyle for text*/
 h1{
@@ -35,7 +35,7 @@ li{
   margin: 5px;
   font-family: 'PT Sans Narrow', sans-serif;  
 }
-/* added osition to "Instruction button"*/
+/* added position to "Instruction button"*/
 a button{
   margin-left: 42%;
 }
