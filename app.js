@@ -7,6 +7,7 @@ var rightCardEl = document.getElementById('right');
 var containerEl = document.getElementById('imageContainer');
 var responseEl = document.getElementById('responseToCardPick');
 var counterEl = document.getElementById('Counter');
+var highestScoreEl = document.getElementById('highestScore');
 var round = 0;
 var playerScore = 0;
 var playerTime = 0;
@@ -30,9 +31,35 @@ var middleCard;
 var rightCard;
 var endGame;
 var pickedCardID;
+
 //game state variable?
 
 containerEl.addEventListener('click', handleClick);
+
+//highest score rendering
+if (localStorage.Data) {
+  var nameData = JSON.parse(localStorage.Data);
+}
+if (localStorage.Player) {
+  var players = JSON.parse(localStorage.Player);
+}
+players.sort(function(a, b){
+  return b.score-a.score;
+});
+console.log('more logs', players);
+function showHighestScore() {
+  console.log('localData', nameData);
+  for (var i = 0; i < players.length; i++) {
+    console.log('playername', players[i].name);
+    console.log('dataname', nameData);
+    if (nameData === players[i].name) {
+      console.log('score', players[i].score);
+      highestScoreEl.textContent = `Highest Score: ${players[i].score}`;
+      return;
+    }
+  }
+}
+showHighestScore();
 
 function uniqueCardGenerator() {
   while (uniqueCardArray.length < 3) {
@@ -68,14 +95,14 @@ function respondToCardPick() {
 }
 
 // MouseOver and Mouse Out: display Side 2 of Card when hover with mouse, goes back to Side 2 text when mouse moves off card.
-document.getElementById("left").addEventListener("mouseover", mouseOver);
-document.getElementById("left").addEventListener("mouseout", mouseOut);
+document.getElementById('left').addEventListener('mouseover', mouseOver);
+document.getElementById('left').addEventListener('mouseout', mouseOut);
 
-document.getElementById("center").addEventListener("mouseover", mouseOver);
-document.getElementById("center").addEventListener("mouseout", mouseOut);
+document.getElementById('center').addEventListener('mouseover', mouseOver);
+document.getElementById('center').addEventListener('mouseout', mouseOut);
 
-document.getElementById("right").addEventListener("mouseover", mouseOver);
-document.getElementById("right").addEventListener("mouseout", mouseOut);
+document.getElementById('right').addEventListener('mouseover', mouseOver);
+document.getElementById('right').addEventListener('mouseout', mouseOut);
 
 function mouseOver() {
   if (event.target.id === 'left') {
@@ -279,6 +306,7 @@ function Player(name, score, time) {
   allPlayers.push(this);
 }
 
+
 function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
@@ -295,5 +323,9 @@ function getStorageData() {
   new Player(person, playerScore, playerTime);
   localStorage.Player = JSON.stringify(allPlayers);
 }
+
+
+
+
 
 
