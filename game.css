@@ -1,23 +1,17 @@
+/* adding background picture and size to body*/
 body{
   width: 90%;
   margin: 0 auto;
   background-image: url(images/space.png);
 }
-p{
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-}
+/*creating box for header where are 2 buttons "home", "score"*/
 .top {
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   height: 50px;
   margin-top: 20px; 
 }
-#background{
-  background-image: url(images/mars1.jpg); 
-  height: 850px;
-  margin-top: 70px;
-}
+/* styling buttons and hover effect + transition time*/
  button{
   width: 100px;
   height: 50px;
@@ -32,9 +26,17 @@ button:hover{
   background-color: rgb(78, 78, 78);
   color: white; 
 }
+/* adding secont background picture (with planets)and size*/
+#background{
+  background-image: url(images/mars1.jpg); 
+  height: 850px;
+  margin-top: 70px;
+}
+/* adding position to cards*/
 .selectionCard{
   position:  relative;
 } 
+/* styling cards and text inside + hover effect to them*/
 #imageContainer li {
   list-style-type: none;
   display: block; 
@@ -57,6 +59,7 @@ button:hover{
  -webkit-transform: scale(1.1);
         transform: scale(1.1);
 }
+/* create box for responce card and stile text+ added background color with opacity*/
 #responseToCardPick{
   border: 1px solid white;
   width: 700px;
@@ -69,9 +72,9 @@ button:hover{
   opacity: 0.9;
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  
+  text-align: center;  
 }
+/* created box for counter+ style text+ added bakground color*/
 #Counter{
   border: 1px solid white;
   width: 20%;
@@ -80,9 +83,9 @@ button:hover{
   color: white;
   text-align: center; 
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
-  
+  font-size: 20px;  
 }
+/* situation string with typing effect*/
 #situation {
   padding: 20px;
   height: 50px;
@@ -122,6 +125,7 @@ button:hover{
   from, to { border-color: transparent }
   /* 50% { border-color: rgb(253, 253, 253); } */
 }
+/* adding background picture to Game Over element + fade in to them*/
 #gameOverElement {
   color: white;
   height: 300px;
@@ -146,20 +150,24 @@ button:hover{
   @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
-  } 
+  }
+/* added text to footer*/
+p{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+/* added stile to footer*/
 footer{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
-  /* height: 80px; */
   padding: 30px 0 30px 0;
   text-align: center;
   color: white;
   position: relative;
   bottom: 0;
 }
-
+/* created box for high score in the game page + style text inside box*/
 #highestScore{
-  
   border: 1px solid white;
   width: 20%;
   padding: 20px 0 20px 0;
