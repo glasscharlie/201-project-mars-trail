@@ -1,0 +1,68 @@
+/* This css copied and adapted from https://codepen.io/bhattaraishankar/pen/WwBeOm */
+@keyframes dg-sm {
+  0% {
+    margin: 0;
+  }
+
+  100% {
+    margin-top: -1200px;
+  }
+}
+@keyframes dg-hour {
+  0% {
+    margin: 0;
+  }
+
+  100% {
+    margin-top: -240px;
+  }
+}
+.dg-clock {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  width: 85px;
+  height: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  background: rgb(36, 35, 35);
+  color: white;
+  text-align: center;
+  font-family: 'Roboto' ,'Arial', 'Helvetica', 'Verdana', sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+div.dg-clock ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 30px;
+  height: 20px;
+}
+div.dg-clock li {
+  display: block;
+  height: 20px;
+}
+.second-list {
+  animation: dg-sm 60s steps(60, end) 0s infinite;
+}
+.minute-list {
+  animation: dg-sm 3600s steps(60, end) 0s infinite;
+}
+.holder {
+  width: 30px;
+  height: 20px;
+  padding: 0 5px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  border: solid #fff;
+  border-width: 1px;
+  letter-spacing: 0;
+}
