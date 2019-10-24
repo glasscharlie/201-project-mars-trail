@@ -1,4 +1,5 @@
 /* This css copied and adapted from https://codepen.io/bhattaraishankar/pen/WwBeOm */
+/* Keyframes seconds counter */
 @keyframes dg-sm {
   0% {
     margin: 0;
@@ -8,6 +9,7 @@
     margin-top: -1200px;
   }
 }
+/* Keyframes minutes counter */
 @keyframes dg-hour {
   0% {
     margin: 0;
@@ -17,6 +19,7 @@
     margin-top: -240px;
   }
 }
+/* Positions and formats time on page */
 .dg-clock {
   position: absolute;
   top: 35px;
@@ -49,6 +52,7 @@ div.dg-clock li {
   display: block;
   height: 20px;
 }
+/* Animate seconds and minutes */
 .second-list {
   animation: dg-sm 60s steps(60, end) 0s infinite;
 }
