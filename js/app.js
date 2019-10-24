@@ -1,3 +1,5 @@
+'use strict';
+
 //Global Variables
 var bodyEl = document.getElementById('body');
 var topCardEl = document.getElementById('situation');
@@ -18,12 +20,6 @@ var maxRounds = 5;
 var uniqueCardArray = [];
 var allRoundCards = [];
 var gameStart = new Date();
-// var roundOneArray = [];
-// var roundTwoArray = [];
-// var roundThreeArray = [];
-// var roundFourArray = [];
-// var roundFiveArray = [];
-// var roundSixArray = [];
 var roundArray = [];
 var topCard;
 var leftCard;
@@ -89,13 +85,9 @@ function uniqueCardGenerator() {
       uniqueCardArray.push(random);
     }
   }
-  // console.log('line 39', allRoundCards[round][uniqueCardArray[0]].gameOver);
-  // console.log('line 40', allRoundCards[round][uniqueCardArray[1]].gameOver);
-  // console.log('line 41', allRoundCards[round][uniqueCardArray[2]].gameOver);
 
   // If statement checks to see if gameOver value for the 3 cards drawn at the random index numbers are all the same
   if (allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[1]].gameOver && allRoundCards[round][uniqueCardArray[0]].gameOver === allRoundCards[round][uniqueCardArray[2]].gameOver) {
-    // console.log('I was here.');
     // If gameOver for all 3 cards is the same, this loops over all the possible cards in the round and finds the first card with an opposite gameOver value.
     for (var i = 0; i < allRoundCards[round].length; i++) {
       if (allRoundCards[round][i].gameOver !== allRoundCards[round][uniqueCardArray[0]].gameOver) {
@@ -106,9 +98,6 @@ function uniqueCardGenerator() {
       }
     }
   }
-  // console.log('line 47', allRoundCards[round][uniqueCardArray[0]].gameOver);
-  // console.log('line 48', allRoundCards[round][uniqueCardArray[1]].gameOver);
-  // console.log('line 49', allRoundCards[round][uniqueCardArray[2]].gameOver);
 }
 
 /**********************************************************************/
@@ -289,13 +278,16 @@ new Card(`${card6CText}`, 6, true, '6C', `${card6CTeaserText}`, `${card6CRespons
 new Card(`${card6DText}`, 6, true, '6D', `${card6DTeaserText}`, `${card6DResponseText}`);
 new Card(`${card6EText}`, 6, true, '6E', `${card6ETeaserText}`, `${card6EResponseText}`);
 
-//Put allCards into array of arrays
+//Put allCards into array of arrays,
+//cycle through the allCards array represented by i,
+//and collect cards for a round represented by j,
+//place each array of a round in an index in the
+//allRoundCards array of arrays.
 function getRounds() {
   for (var j = 0; j < 6; j++) {
     console.log('j: ', j);
     roundArray = [];
     for (var i = 0; i < allCards.length; i++) {
-      // console.log(allCards[i].cardRound);
       if (allCards[i].cardRound === (j + 1)) {
         roundArray.push(allCards[i]);
       }
@@ -335,11 +327,6 @@ render();
 function handleClick() {
   endGameYesNo();
   console.log('endgame: ', endGame);
-  // if (endGame !== true) {
-
-  // }
-  // console.log(event.target.title);
-  // pickedCard = event.target.title;
 }
 
 // player constuctor to store player data
@@ -364,9 +351,3 @@ function getStorageData() {
   new Player(person, playerScore, playerTime);
   localStorage.Player = JSON.stringify(allPlayers);
 }
-
-
-
-
-
-
