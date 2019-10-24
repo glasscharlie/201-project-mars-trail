@@ -57,6 +57,9 @@ function showHighestScore() {
       highestScoreEl.textContent = `Highest Score: ${players[i].score}`;
       return;
     }
+    else {
+      highestScoreEl.textContent = 'Highest Score: 0';
+    }
   }
 }
 showHighestScore();
