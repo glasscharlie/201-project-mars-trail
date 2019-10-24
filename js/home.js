@@ -9,7 +9,7 @@ function addPlayer(event) {
   console.log(playerID);
   localStorage.Data = JSON.stringify(playerID);
   userForm.removeEventListener('submit', addPlayer);
-  window.location.href = 'game.html';
+  window.location.href = 'html/game.html';
 }
 
 
