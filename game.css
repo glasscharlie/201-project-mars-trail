@@ -81,7 +81,7 @@ button:hover{
   text-align: center; 
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  vertical-align: center;
+  
 }
 #situation {
   padding: 20px;
@@ -150,7 +150,8 @@ button:hover{
 footer{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
-  height: 80px;
+  /* height: 80px; */
+  padding: 30px 0 30px 0;
   text-align: center;
   color: white;
   position: relative;
@@ -168,9 +169,9 @@ footer{
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   vertical-align: center;
-  position: absolute;
+  position: absolute; 
   right: 5%;
-  top: 10%;
+  top: 7.5%;  
 }
 
 
