@@ -115,7 +115,7 @@ function uniqueCardGenerator() {
 /* Changes the text in responseEl at the end of each round            */
 /*     - each instantiation of Card has a responseText property       */
 /*       that stores a string.                                        */
-/*     - pickedCardID attached to an event listener, such that        */
+/*     - pickedCardID is attached to an event listener, such that     */
 /*       the cardID property of the card the player chose gets        */
 /*       pushed into the title attribute of the element holding       */
 /*       the card.                                                    */
@@ -134,7 +134,11 @@ function respondToCardPick() {
   }
 }
 
-// MouseOver and Mouse Out: display Side 2 of Card when hover with mouse, goes back to Side 2 text when mouse moves off card.
+/************************************************************************************/
+/* mouseOver(), mouseOut()                                                          */
+/* - displays teaserText property of Card when player hovers                        */
+/*   with mouse, changes back to text property of Card when mouse moves off card.   */
+/************************************************************************************/
 document.getElementById('left').addEventListener('mouseover', mouseOver);
 document.getElementById('left').addEventListener('mouseout', mouseOut);
 
