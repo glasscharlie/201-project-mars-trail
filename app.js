@@ -43,23 +43,23 @@ if (localStorage.Data) {
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
 }
-players.sort(function(a, b){
-  return b.score-a.score;
-});
-console.log('more logs', players);
+if (localStorage.Player) {
+
+  players.sort(function(a, b){
+    return b.score-a.score;
+  });
+}
 function showHighestScore() {
-  console.log('localData', nameData);
-  for (var i = 0; i < players.length; i++) {
-    console.log('playername', players[i].name);
-    console.log('dataname', nameData);
-    if (nameData === players[i].name) {
-      console.log('score', players[i].score);
-      highestScoreEl.textContent = `Highest Score: ${players[i].score}`;
-      return;
+  if (localStorage.player) {
+    for (var i = 0; i < players.length; i++) {
+      if (nameData === players[i].name) {
+        highestScoreEl.textContent = `Highest Score: ${players[i].score}`;
+        return;
+      }
     }
-    else {
-      highestScoreEl.textContent = 'Highest Score: 0';
-    }
+  }
+  if (!localStorage.player) {
+    highestScoreEl.textContent = 'Highest Score: 0';
   }
 }
 showHighestScore();
@@ -305,7 +305,6 @@ function Player(name, score, time) {
   this.name = name;
   this.score = score;
   this.time = time;
-  // this.cardID = cardID;
   allPlayers.push(this);
 }
 
@@ -313,16 +312,10 @@ function Player(name, score, time) {
 function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
-    console.log('PERSON', person);
-
   }
   if (localStorage.Player) {
     allPlayers = JSON.parse(localStorage.Player);
-    console.log('test', allPlayers);
-
   }
-  // console.log (localStorage.Player);
-  // console.log (allPlayers);
   new Player(person, playerScore, playerTime);
   localStorage.Player = JSON.stringify(allPlayers);
 }
