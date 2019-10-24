@@ -102,6 +102,7 @@ function uniqueCardGenerator() {
         // Substitutes the card with an opposite value for gameOver into uniqueCardArray at a random spot.
         var randomIndex = makeRandom(2);
         uniqueCardArray[randomIndex] = i;
+        return;
       }
     }
   }
