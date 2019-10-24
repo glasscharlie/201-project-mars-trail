@@ -36,19 +36,21 @@ var pickedCardID;
 
 containerEl.addEventListener('click', handleClick);
 
-//highest score rendering
+//if there is Data(player name) in localStorage, it grabs it and stores it in variable nameData
 if (localStorage.Data) {
   var nameData = JSON.parse(localStorage.Data);
 }
+//if there is Player Stats(name, score, time) in localStorage, it grabs it and stores it in variable players, and sorts player by score
 if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
-}
-if (localStorage.Player) {
-
   players.sort(function(a, b){
     return b.score-a.score;
   });
 }
+// function that shows players highest score on game page
+//if there is player stats in local storage, runs a for loop for the length of players variable
+//for length of players variable, check to see if player name is equal to names in the players array, if so it renders the score and stops the function
+//if player name is not in the array, it renders a highest score of 0
 function showHighestScore() {
   if (localStorage.player) {
     for (var i = 0; i < players.length; i++) {
@@ -320,7 +322,7 @@ function handleClick() {
   // pickedCard = event.target.title;
 }
 
-
+// player constuctor to store player data
 function Player(name, score, time) {
   this.name = name;
   this.score = score;
@@ -328,7 +330,10 @@ function Player(name, score, time) {
   allPlayers.push(this);
 }
 
-
+// function to store Player stats in localStorage
+//if there is Data(player name) in localStorage, it grabs it
+//if there is Player stats (name, score and time) in localStorage already, it grabs it
+//Creates a new player object and stores it in localStorage
 function getStorageData() {
   if (localStorage.Data) {
     var person = JSON.parse(localStorage.Data);
