@@ -1,6 +1,7 @@
+'use strict';
+
 /* eslint-disable quotes */
-// Round Senario List [round1,round2,round3,round4,round5,round6]
-//= ['Get to the ship', 'Fight the Martians', 'Collect Supplies', 'Fix the spaceship', 'Navigate course', 'Launch'];
+// Round Scenario List [round1,round2,round3,round4,round5,round6]
 
 // Round 1
 var roundScenarioOne = 'From your outpost you spot a strange sight over the horizon. There are quite a few of them…';
@@ -26,13 +27,13 @@ var card1ETeaserText = 'Maybe they will pass you by!';
 var card1EResponseText = 'The Martian species has awoken and in a rage they are forcefully reclaiming the planet, and you are not welcome.';
 
 // Round 2
-var roundScenarioTwo = "Your new neighbors don’t seem very friendly, in fact it looks as if they intend you harm.";
+var roundScenarioTwo = 'Your new neighbors don\'t seem very friendly, in fact it looks as if they intend you harm.';
 
 var card2AText = 'Stand your ground! How tough could they be?';
 var card2ATeaserText = 'Very. The answer is very tough.';
 var card2AResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
-var card2BText = "Take the rover: They can’t hurt what they cant catch!";
+var card2BText = 'Take the rover: They can\'t hurt what they cant catch!';
 var card2BTeaserText = 'Oh right, Rover’s are slow. REALLY slow...Uh oh...';
 var card2BResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
@@ -41,7 +42,7 @@ var card2CTeaserText = 'Gravity is much lighter on mars.';
 var card2CResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
 var card2DText = 'Negotiate, surely they see the senselessness of this aggression.';
-var card2DTeaserText = 'I wonder how well they comprehend forign languages.';
+var card2DTeaserText = 'I wonder how well they comprehend foreign languages.';
 var card2DResponseText = 'The Martians are too many and too strong, being smart is the only way you are going to get off of this planet.';
 
 var card2EText = 'Distract them!';
@@ -52,7 +53,7 @@ var card2EResponseText = 'The Martians are too many and too strong, being smart 
 var roundScenarioThree = 'You see the supply depot ahead, best to stock up.';
 
 var card3AText = 'Look for food and water, humans need these things.';
-var card3ATeaserText = 'No point leaving the planet if YOU don’t make it back!';
+var card3ATeaserText = 'No point leaving the planet if you don\'t make it back!';
 var card3AResponseText = 'You are glad you found the depot when you did, you wonder if there was more you should have taken, but you can never be sure how close the Martians are.';
 
 var card3BText = 'Ship parts, planet entry is a messy business, something is probably damaged';
@@ -72,7 +73,7 @@ var card3ETeaserText = 'The Martians need a break too right?';
 var card3EResponseText = 'You are glad you found the depot when you did, you wonder if there was more you should have taken, but you can never be sure how close the Martians are.';
 
 // Round 4
-var roundScenarioFour = 'The ship IS damaged, best try to fix it';
+var roundScenarioFour = 'The ship is damaged, best try to fix it';
 
 var card4AText = ' Cut the red wire!';
 var card4ATeaserText = 'This always works in the movies!';
@@ -95,10 +96,10 @@ var card4ETeaserText = 'It will take awhile...';
 var card4EResponseText = 'Now you have a way off this planet, but you are not safe yet, and there is still more to do.';
 
 // Round 5
-var roundScenarioFive = "You’re here, and the ship is fixed. You need to chart a course";
+var roundScenarioFive = 'You\'re here, and the ship is fixed. You need to chart a course';
 
-var card5AText = "I can eyeball it!";
-var card5ATeaserText = 'It’s not like its rocket science...';
+var card5AText = 'I can eyeball it!';
+var card5ATeaserText = 'It\'s not like its rocket science...';
 var card5AResponseText = 'Well that is one small step, now just need one big launch to get out of here.';
 
 var card5BText = 'Gotta fire up the navigational computer!';
@@ -118,7 +119,7 @@ var card5ETeaserText = 'It makes me feel better...';
 var card5EResponseText = 'Well that is one small step, now just need one big launch to get out of here.';
 
 // Round 6
-var roundScenarioSix = "The ship works, you have supplies, the course is chartered, it is time to leave.";
+var roundScenarioSix = 'The ship works, you have supplies, the course is chartered, it is time to leave.';
 
 var card6AText = 'Lock everything down. Take no chances.';
 var card6ATeaserText = 'Better to be safe than sorry  ...';
