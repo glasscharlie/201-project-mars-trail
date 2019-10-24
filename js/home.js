@@ -1,3 +1,4 @@
+'use strict';
 //gets element of the start button
 var userForm = document.getElementById('Start');
 userForm.addEventListener('submit', addPlayer);
@@ -6,7 +7,6 @@ userForm.addEventListener('submit', addPlayer);
 function addPlayer(event) {
   event.preventDefault();
   var playerID = event.target.newPlayer.value;
-  console.log(playerID);
   localStorage.Data = JSON.stringify(playerID);
   userForm.removeEventListener('submit', addPlayer);
   window.location.href = 'html/game.html';

@@ -1,6 +1,4 @@
 'use strict';
-
-/* eslint-disable quotes */
 // Round Scenario List [round1,round2,round3,round4,round5,round6]
 
 // Round 1
