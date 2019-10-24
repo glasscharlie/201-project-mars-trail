@@ -4,7 +4,6 @@ if (localStorage.Player) {
   var players = JSON.parse(localStorage.Player);
 }
 
-
 // sorts the table by player score (highest to lowest)
 players.sort(function(a, b){
   return b.score-a.score;
@@ -38,7 +37,7 @@ function generateTable() {
   var body = document.getElementById('highscores');
   var tbl = document.createElement('table');
   var tblBody = document.createElement('tbody');
-// renders the name heading and appends it to the table
+  // renders the name heading and appends it to the table
   var newTHead = document.createElement('thead');
   var newTR = document.createElement('tr');
   var newTH = document.createElement('th');
@@ -46,19 +45,19 @@ function generateTable() {
   newTR.appendChild(newTH);
   newTHead.appendChild(newTR);
   tbl.appendChild(newTHead);
-// renders the score heading and appends it
+  // renders the score heading and appends it
   newTH = document.createElement('th');
   newTH.textContent = 'Score';
   newTR.appendChild(newTH);
-// renders the time heading and appends it
+  // renders the time heading and appends it
   newTH = document.createElement('th');
   newTH.textContent = 'Time';
   newTR.appendChild(newTH);
-//Creates a row for each player in the player array (array caps at 10)
+  //Creates a row for each player in the player array (array caps at 10)
   for (var i = 0; i < players.length; i++) {
     var row = document.createElement('tr');
     tblBody.appendChild(row);
-//creates the table data to render to the table rows
+    //creates the table data to render to the table rows
     for (var j = 0; j < 1; j++){
       var cell = document.createElement('td');
       var cellText = document.createTextNode(players[i].name);
@@ -79,8 +78,5 @@ function generateTable() {
   body.appendChild(tbl);
   tbl.appendChild(tblBody);
 
-
 }
 generateTable();
-
-

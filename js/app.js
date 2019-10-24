@@ -162,29 +162,21 @@ function getCards() {
   uniqueCardGenerator();
   topCard = roundScenarioText[round];
   leftCard = allRoundCards[round][uniqueCardArray[0]];
-  console.log('leftCard ', leftCard);
   middleCard = allRoundCards[round][uniqueCardArray[1]];
-  console.log('middleCard ', middleCard);
   rightCard = allRoundCards[round][uniqueCardArray[2]];
-  console.log('rightCard ', rightCard);
   uniqueCardArray = [];
 }
 
 function endGameYesNo() {
   pickedCardID = event.target.title;
-  console.log(pickedCardID);
-  console.log('look! ', event.target.id);
   for (var i = 0; i < allCards.length; i++) {
     if (allCards[i].cardID === pickedCardID) {
       endGame = allCards[i].gameOver;
-      console.log(endGame);
-      console.log('line 53');
       if (endGame === false && round < maxRounds) {
         /// continue
         round++;
         playerScore++;
         counterEl.textContent = `Current Score: ${playerScore}`;
-        console.log('round: ', round);
         render();
       }
       else if (round === maxRounds && endGame === false) {
@@ -199,12 +191,10 @@ function endGameYesNo() {
         gameOverEl.textContent = 'You Win';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER Win!!!!!');
         playerScore++;
         counterEl.textContent = `Current Score: ${playerScore}`;
         var gameEndWin = new Date();
         var timeWin = (gameEndWin - gameStart) / 1000;
-        console.log('time win', timeWin);
         playerTime = timeWin;
         getStorageData();
       }
@@ -219,16 +209,13 @@ function endGameYesNo() {
         gameOverEl.textContent = 'GAME OVER';
         gameOverEl.id = 'gameOverElement';
         containerEl.appendChild(gameOverEl);
-        console.log('GAME OVER lose!!!!!');
         var gameEndLose = new Date();
         var timeLose = (gameEndLose - gameStart) / 1000;
-        console.log('time lost', timeLose);
         playerTime = timeLose;
         getStorageData();
       }
     }
   }
-  console.log('TIME: ', playerTime);
 }
 
 //Card Object
@@ -285,7 +272,6 @@ new Card(`${card6EText}`, 6, true, '6E', `${card6ETeaserText}`, `${card6ERespons
 //allRoundCards array of arrays.
 function getRounds() {
   for (var j = 0; j < 6; j++) {
-    console.log('j: ', j);
     roundArray = [];
     for (var i = 0; i < allCards.length; i++) {
       if (allCards[i].cardRound === (j + 1)) {
@@ -326,7 +312,6 @@ render();
 
 function handleClick() {
   endGameYesNo();
-  console.log('endgame: ', endGame);
 }
 
 // player constuctor to store player data
