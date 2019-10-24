@@ -8,9 +8,12 @@ h1{
   border: 1px solid rgb(184, 184, 184);
   background-color: rgb(36, 35, 35);
   color: white;
-  height:50px;
+  /* height:80px; */
+  padding: 25px 0 25px 0;
   text-align: center;
   font-family: 'Audiowide', cursive;
+  font-size: 40px;
+  margin-top: 20px;
   }
 img{
   width: 40%;

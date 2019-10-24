@@ -5,17 +5,18 @@ body{
     opacity: 0.9;
     background-repeat: no-repeat;
     height: 800px; 
-  background-position: center; 
-  background-size: cover;
+    background-position: center; 
+    background-size: cover;
   }
 
   h1{
     text-align: center;
     border: 1px solid rgb(184, 184, 184);
-    height: 50px;
+    padding: 25px 0 25px 0;
     background: rgb(36, 35, 35);
     color: white;
     margin-top: 20px;
+    margin-bottom: 30px;
     font-family: 'PT Sans Narrow', sans-serif;
   }
 
