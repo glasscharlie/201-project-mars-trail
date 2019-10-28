@@ -48,7 +48,7 @@ if (localStorage.Player) {
 //for length of players variable, check to see if player name is equal to names in the players array, if so it renders the score and stops the function
 //if player name is not in the array, it renders a highest score of 0
 function showHighestScore() {
-  if (localStorage.player) {
+  if (localStorage.Player) {
     for (var i = 0; i < players.length; i++) {
       if (nameData === players[i].name) {
         highestScoreEl.textContent = `Highest Score: ${players[i].score}`;
